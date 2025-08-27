@@ -6,8 +6,9 @@ __pycache__/
 
 # C extensions
 *.so
+*/venv/
 
-# Distribution / packaging
+ribution / packaging
 .Python
 build/
 develop-eggs/
@@ -175,4 +176,3 @@ cmake-build-debug
 
 # vscodium / vscode
 .vscode
-
