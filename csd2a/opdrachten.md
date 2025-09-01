@@ -1,5 +1,25 @@
 # Opdrachten
 
+# 3 - Voorbereiding volgende keer
+
+_**Let op: dit bouwt voort op de opdrachten uit week 1 & 2**_
+- **[WRITE]** Werk je pseudo code uit in Python; implementeer in een python script je strategie en print aan het einde je gegenereerde ritme. Tips:
+  - Complexe strategie? -->  Wat is de minimum viable product (m.v.p.)?
+
+  - Gebruikersinput nodig? Mock dit voor nu even door dit gewoon even te 'hardcoden' , d.w.z. ken voor nu een vaste waarde toe waar nodig alsof die door een gebruiker is ingevoerd. Test je script uiteindelijk wel uit met verschillende waardes, zodat je weet dat het voor verschillende mogelijke input werkt.
+
+- **[READ]** Lees het timestamps_final.py voorbeeld grondig (neem hier echt de tijd voor) en:
+  - Breek het script op in verschillende onderdelen. Als je deze onderdelen in losse functies zou verwerken, hoe zou je dan deze functies noemen? Noteer passende functie namen.
+  - Maak een flow chart bij dit script.
+  - Het script is geschikt voor een ritme met één sample. Wat zou er aangepast moeten worden als je meerdere samples wilt afspelen? Hoe zou je dat doen, schets dit in pseudo code.
+  - Het script is momenteel niet geschikt voor gelijktijdig 'getriggerde' samples. Allereerst komt dit omdat het met maar één sample werkt. Maar ook als je meerdere samples gebruikt kun je niet twee samples tegelijkertijd afspelen. Hoe kan dit? Hoe kun je dit oplossen? Pas de code aan (of werk uit in pseudo code).
+<br/><br/>
+- **[WRITE][OPTIONAL]** Maak een kopie van het python script waarin je je generatie strategie hebt verwerkt. Voeg hier de afspeel functionaliteit uit timestamps_final.py aan toe en speel je gegenereerde ritme af!
+
+
+
+
+
 
 # 2 - Voorbereiding volgende keer
 
@@ -35,7 +55,6 @@ _**Let op: al het onderstaande hoort bij week 2, dit bouwt voort op de opdrachte
     - laad minimaal drie verschillende samples en speel deze na elkaar af
     - laad minimaal drie verschillende samples en speel deze samples af op basis van een volgorde aangegeven in een lijst (voor python lists zie https://www.w3schools.com/python/python_lists.asp)
     - laad minimaal drie verschillende samples, genereer een lijst met _random_ die de afspeel volgorde aangeeft (voor python lists zie https://www.w3schools.com/python/python_lists.asp, voor random zie https://www.w3schools.com/python/ref_random_randint.asp en https://www.w3schools.com/python/ref_random_choices.asp)
-
 
 
 
