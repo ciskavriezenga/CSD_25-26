@@ -1,5 +1,32 @@
 # Opdrachten
 
+
+# 2 - Voorbereiding volgende keer
+
+_**Let op: al het onderstaande hoort bij week 2, dit bouwt voort op de opdrachten uit week 1**_
+
+
+- **[DESIGN]** Vervolg ritme generatie strategie
+  - Scherp je ritme generatie strategie aan op basis van eventuele feedback / andere presentaties _(of switch naar een andere strategie en werk deze eerst uit, kan nu nog)_ en werk de pseudo code op gedetaileerder niveau verder uit.
+  - Playtest je pseudocode; laat iemand anders de code uitvoeren. Dwz, je playtester speelt het systeem en voert regel voor regel je pseudo code uit _(practicum is hier een goed moment voor)_. Let op: de code moet 'voor zichzelf spreken', je mag niet helpen door extra aanwijzingen en toelichtingen te geven _(dus niet de playtest beïnvloeden met zinnen als "ja, nu moet je dus eigenlijk dit doen")_.
+  - Fix de _(eventuele)_ bugs en test het opnieuw _(geen bugs? Toch nog een keer playtesten, altijd waardevol)_.
+<br/><br/>
+- Python
+  - **[READ SKILL]** Als je nog niet de twee relatief eenvoudige ritmes in de csd2a/session2/relative_simple_examples map gelezen en uitgeplozen hebt: lees deze dan alsnog. Het liefst hardop (of in je hoofd hardop) waarbij je per stukje code de werking voorstelt. Wat bij dit laatste helpt is het uitvoeren van de code op papier.
+  
+  - **[WRITE SKILL]** kopieer de code uit de csd2a/session1/hello_bliep.py naar je eigen repository en speel de sample meerdere keren af. Werk dit in ieder geval op de volgende twee manieren uit:
+    - met een while loop (zie https://www.w3schools.com/python/python_while_loops.asp)
+    - met een forloop en range (zie **The range() Function** op https://www.w3schools.com/python/python_for_loops.asp)  
+
+  - **[WRITE SKILL]** **[OPTIONAL]** Werk de volgende python scripts uit _(dit bouwt stap voor stap op, dus je kunt ook één script steeds verder uitwerken)_:
+    - laad minimaal drie verschillende samples en speel deze na elkaar af
+    - laad minimaal drie verschillende samples en speel deze samples af op basis van een volgorde aangegeven in een lijst (voor python lists zie https://www.w3schools.com/python/python_lists.asp)
+    - laad minimaal drie verschillende samples, genereer een lijst met _random_ die de afspeel volgorde aangeeft (voor python lists zie https://www.w3schools.com/python/python_lists.asp, voor random zie https://www.w3schools.com/python/ref_random_randint.asp en https://www.w3schools.com/python/ref_random_choices.asp)
+
+
+
+
+
 # 1 - Voorbereiding volgende keer
 
 _**Let op: al het onderstaande hoort bij week 1**_
@@ -13,7 +40,7 @@ _**Let op: al het onderstaande hoort bij week 1**_
   - Sequence variations on given configuration sets
   - 1st order Markov chain *(a bit more complex)*
 <br/><br/>
-- Ontwerp in duo's een ritme generatie strategie en bereid **een presentatie van 3 minuten** voor, met daarin:
+- Ontwerp individueel _(eventueel in duo, maar dan werk je daarna ws ook aan dezelfde strategie)_ een ritme generatie strategie en bereid **een presentatie van 3 minuten** voor, met daarin:
   - Uitleg van je strategie, deel hierbij onder andere de stappen van je strategie en een flow diagram *(eenvoudig is oké!)*
   - Voor- en nadelen op een rij (bijv. sommige strategieën zijn eenvoudig te programmeren (voordeel) maar leveren niet zulke gevarieerde ritmes op (nadeel) of vergen veel configuratie om tot interessante ritmes te komen (nadeel) )
   - De basis van je strategie uitgewerkt in pseudo code
