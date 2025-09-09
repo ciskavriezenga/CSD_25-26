@@ -29,7 +29,7 @@ _**Let op: al het onderstaande hoort bij week 2, dit bouwt voort op de opdrachte
 - **[DESIGN]** Vervolg ritme generatie strategie
   - Scherp je ritme generatie strategie aan op basis van eventuele feedback / andere presentaties _(of switch naar een andere strategie en werk deze eerst uit, kan nu nog)_ en werk de pseudo code op gedetaileerder niveau verder uit.
   - Playtest je pseudocode; laat iemand anders de code uitvoeren. Dwz, je playtester speelt het systeem en voert regel voor regel je pseudo code uit _(practicum is hier een goed moment voor)_. Let op: de code moet 'voor zichzelf spreken', je mag niet helpen door extra aanwijzingen en toelichtingen te geven _(dus niet de playtest beïnvloeden met zinnen als "ja, nu moet je dus eigenlijk dit doen")_.
-  - Fix de _(eventuele)_ bugs en test het opnieuw _(geen bugs? Toch nog een keer playtesten, altijd waardevol)_. #Herhaal --> totdat er geen bugs meer inzitten en je pseudo code werkt!
+  - Fix de _(eventuele)_ bugs en test het opnieuw _(geen bugs? Toch nog een keer playtesten met iemand anders (!), altijd waardevol)_. #Herhaal --> totdat er geen bugs meer inzitten en je pseudo code werkt!
 <br/><br/>
 
 - Python
