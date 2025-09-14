@@ -7,29 +7,50 @@ _**Let op: dit bouwt voort op de opdrachten uit week 1 & 2**_
   - Beschrijving van de gekozen strategie, inclusief voordelen en nadelen
   - Strategie uitgewerkt in stappen en/of flow diagram
   - 'Werkende' pseudo code van de strategie (d.w.z. het generatie deel, niet het afspeel deel)
-<br/><br/>
+
+<br/>
+
 - **[WRITE]** Werk je pseudo code uit in Python; implementeer in een python script je strategie en print aan het einde je gegenereerde ritme. Tips:
   - Complexe strategie? -->  Wat is de minimum viable product (m.v.p.)?
 
   - Gebruikersinput nodig? Mock dit voor nu even door dit gewoon even te 'hardcoden' , d.w.z. ken voor nu een vaste waarde toe waar nodig alsof die door een gebruiker is ingevoerd. Test je script uiteindelijk wel uit met verschillende waardes, zodat je weet dat het voor verschillende mogelijke input werkt.
 
+<br/>
 
-  <br/><br/>
-  - **[READ][WRITE]** [OPTIONAL FOR EXPERIENCED CODERS] Deze opdracht is voor extra verwerking van de tijdens de sessie besproken content. In de map session3/sample_player staan voorbeeldscripts. Deze scripts bevatten oefeningen en opdrachten. Ga met de voorbeeldscripts aan de slag: code lezen en begrijpen, denk per script na wat je als output verwacht, daarna pas het script uitproberen en vervolgens de opdrachten uitvoeren die in de comments in de code staan (EXERCISES).
+- **[READ][WRITE]** [OPTIONAL FOR EXPERIENCED CODERS] Verwerkingsopdracht.
 
+  Deze opdracht is voor extra verwerking van de tijdens de sessie besproken content. In de map session3/sample_player staan voorbeeldscripts. Deze scripts bevatten oefeningen en opdrachten. Ga met de voorbeeldscripts aan de slag: code lezen en begrijpen, denk per script na wat je als output verwacht, daarna pas het script uitproberen en vervolgens de opdrachten uitvoeren die in de comments in de code staan (EXERCISES).
+
+<br/>
 
 - **[READ]** Lees het timestamps_final.py voorbeeld grondig (neem hier echt de tijd voor) en:
-  - Breek het script op in verschillende onderdelen. Als je deze onderdelen in losse functies zou verwerken, hoe zou je dan deze functies noemen? Noteer passende functie namen.
+  - Breek het script op in verschillende onderdelen. Als je deze onderdelen in losse functies zou verwerken, hoe zou je dan deze functies noemen? Noteer passende functie namen (bijv. als comments).
   - Maak een flow chart bij dit script.
   - Het script is geschikt voor een ritme met één sample. Wat zou er aangepast moeten worden als je meerdere samples wilt afspelen? Hoe zou je dat doen, schets dit in pseudo code.
   - Het script is momenteel niet geschikt voor gelijktijdig 'getriggerde' samples. Allereerst komt dit omdat het met maar één sample werkt. Maar ook als je meerdere samples gebruikt kun je niet twee samples tegelijkertijd afspelen. Hoe kan dit? Hoe kun je dit oplossen? Pas de code aan (of werk uit in pseudo code).
 
+<br/>
 
+- **[READ]** Functies in python
+  - Lees de volgende delen over functies op https://www.w3schools.com/python/python_functions.asp, lees:
+    - Creating a Function
+    - Calling a Function
+    - Arguments
+    - Number of Arguments
+    - Return Values
+    Optioneel:
+    - Default Parameter Value
+    - Passing a List as an Argument
 
+  - Lees de code in script 3e_functions, hoe werken de functies?
+  - **[WRITE][OPTIONAL]** Maak een kopie van het python script waarin je je generatie strategie hebt verwerkt. Deel je script op in delen en breng deze onder in functies. Besteed hierbij aandacht aan de naamgeving en wat de functie doet, is het een functie met een input en output? Of past het de input aan? Goed om dit aan de functie naam af te kunnen lezen!
+  - **[WRITE][OPTIONAL]** Maak een kopie van het timestamps_final.py script. Deel dit script op in delen en breng deze onder in functies. Besteed hierbij aandacht aan de naamgeving en wat de functie doet, is het een functie met een input en output? Of past het de input aan? Goed om dit aan de functie naam af te kunnen lezen!
 
+<br/>
 
-<br/><br/>
-- **[WRITE][OPTIONAL]** Maak een kopie van het python script waarin je je generatie strategie hebt verwerkt. Voeg hier de afspeel functionaliteit uit timestamps_final.py aan toe en speel je gegenereerde ritme af!
+- **[WRITE][OPTIONAL]** Eigen generatie strategie + afspeelfunctionaleit.
+
+  Maak een kopie van het python script waarin je je generatie strategie hebt verwerkt. Voeg hier de afspeel functionaliteit uit timestamps_final.py aan toe en speel je gegenereerde ritme af!
 
 
 
