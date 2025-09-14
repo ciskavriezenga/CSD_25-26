@@ -3,8 +3,6 @@ An example project in which three wav files are used.
 
 ------ EXERCISES ------
 
-- What does the function wait_done() do?
-
 - Answer the following question before running the code:
   Do you expect to hear the samples played simultaneously or one after the other?
   Why?
@@ -27,22 +25,23 @@ An example project in which three wav files are used.
 import pygame
 import time
 
-# load audio files
-sampleHigh = sa.WaveObject.from_wave_file("../audioFiles/Pop.wav")
-sampleMid = sa.WaveObject.from_wave_file("../audioFiles/Laser1.wav")
-sampleLow = sa.WaveObject.from_wave_file("../audioFiles/Dog2.wav")
+# init  mixer module and load samples
+pygame.init()
+sampleHigh = pygame.mixer.Sound('../../assets/plop.wav')
+sampleMid = pygame.mixer.Sound('../../assets/Laser1.wav')
+sampleLow = pygame.mixer.Sound('../../assets/Dog2.wav')
 
 # play high sample
 sampleHighPlay = sampleHigh.play()
 # wait till sample is done playing
-sampleHighPlay.wait_done()
+time.sleep(sampleHigh.get_length())
 
 # play mid sample
 sampleMidPlay = sampleMid.play()
 # wait till sample is done playing
-sampleMidPlay.wait_done()
+time.sleep(sampleMid.get_length())
 
 # play low sample
 sampleLowPlay = sampleLow.play()
 # wait till sample is done playing
-sampleLowPlay.wait_done()
+time.sleep(sampleLow.get_length())

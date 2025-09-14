@@ -11,7 +11,7 @@ import time
 # ___ retrieve all necessary values and lists necessary for playing rhythm ___
 # TODO retrieve note durations from input
 
-# TODO retrieve BPM and calculate corresponding quarternote duration
+# TODO retrieve BPM and calculate corresponding quarternote duration in time
 
 # TODO transform note durations to sequence of time durations (sec)
 

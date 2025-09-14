@@ -31,13 +31,17 @@ We will trigger events based on a timestamp.
 
 """
 
-import simpleaudio as sa
+import pygame
 import time
 import random
 
-# load 1 audioFile and store it into a list
+# init  mixer module and load 1 audio file into a list
 # note: using a list taking the next step into account: using multiple samples
-samples = [sa.WaveObject.from_wave_file("../audioFiles/Pop.wav")]
+pygame.init()
+samples = [ pygame.mixer.Sound("../../assets/plop.wav"),
+            pygame.mixer.Sound("../../assets/Laser1.wav"),
+            pygame.mixer.Sound("../../assets/Dog2.wav")]
+
 
 bpm = 120
 quarterNoteDuration = 60 / bpm
@@ -88,4 +92,3 @@ while True:
 
 
 time.sleep(1) # let the last 'note' ring out
-

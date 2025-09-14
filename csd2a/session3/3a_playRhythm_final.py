@@ -18,7 +18,7 @@ for i in range(int(num_notes)):
 
 print("note_durations:", note_durations)
 
-# retrieve BPM and calculate corresponding quarternote duration
+# retrieve BPM and calculate corresponding quarternote duration in time
 bpm = float(input("Enter BPM\n"))
 quarternote_dur = 60.0 / bpm
 print("bpm:", bpm, "quarternote_dur", quarternote_dur)

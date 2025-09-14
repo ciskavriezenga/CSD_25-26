@@ -14,14 +14,18 @@ An example project in which a sequence of one bar is played, using only one audi
   Fix the bug that occurs: "IndexError: pop from empty list"
 """
 
-import simpleaudio as sa
+import pygame
 import time
 import random
 
 # load an audio file and store it into a list
 # note: using a list is a preparation for the next assignment in which we
 # will use multiple audio files
-samples = [sa.WaveObject.from_wave_file("../audioFiles/Pop.wav")]
+
+# init  mixer module and load audio files into a list
+pygame.init()
+samples = [ pygame.mixer.Sound("../../assets/plop.wav")]
+
 
 bpm = 120
 # calculate quarterNote with bpm

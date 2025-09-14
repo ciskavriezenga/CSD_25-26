@@ -3,36 +3,28 @@
 
 # 3 - Voorbereiding volgende keer
 _**Let op: dit bouwt voort op de opdrachten uit week 1 & 2**_
-- **[DESIGN]** Eindopdracht - generatie deel uitgewerkt en documentatie hiervan op git met daarin:
-  - Beschrijving van de gekozen strategie, inclusief voordelen en nadelen
-  - Strategie uitgewerkt in stappen en/of flow diagram
-  - 'Werkende' pseudo code van de strategie (d.w.z. het generatie deel, niet het afspeel deel)
+- **[DESIGN] Eindopdracht - ontwerp concept**
+  - Indien je dit nog niet gedaan hebt, werk dan je generatie strategie volledig uit, met de onderstaande onderdelen:
+    - Beschrijving van de gekozen strategie, inclusief voordelen en nadelen (+/- 1 a 2 alinea's)
+    - Strategie uitgewerkt in stappen en/of flow diagram
+    - 'Werkende' pseudo code van de strategie (d.w.z. het generatie deel, niet het afspeel deel)
+  - Voeg deze documentatie toe aan je online repository.
 
 <br/>
 
-- **[WRITE]** Werk je pseudo code uit in Python; implementeer in een python script je strategie en print aan het einde je gegenereerde ritme. Tips:
-  - Complexe strategie? -->  Wat is de minimum viable product (m.v.p.)?
+- **[WRITE] Implementatie generatie strategie in Python**
+  - Werk je pseudo code uit in Python; implementeer in een python script je strategie en print aan het einde je gegenereerde ritme.
 
-  - Gebruikersinput nodig? Mock dit voor nu even door dit gewoon even te 'hardcoden' , d.w.z. ken voor nu een vaste waarde toe waar nodig alsof die door een gebruiker is ingevoerd. Test je script uiteindelijk wel uit met verschillende waardes, zodat je weet dat het voor verschillende mogelijke input werkt.
+    _Nog te lastig? Geen probleem! Benut het practicum!_
 
-<br/>
-
-- **[READ][WRITE]** [OPTIONAL FOR EXPERIENCED CODERS] Verwerkingsopdracht.
-
-  Deze opdracht is voor extra verwerking van de tijdens de sessie besproken content. In de map session3/sample_player staan voorbeeldscripts. Deze scripts bevatten oefeningen en opdrachten. Ga met de voorbeeldscripts aan de slag: code lezen en begrijpen, denk per script na wat je als output verwacht, daarna pas het script uitproberen en vervolgens de opdrachten uitvoeren die in de comments in de code staan (EXERCISES).
+  Tips:
+    - Complexe strategie? -->  Wat is de minimum viable product (m.v.p.)?
+    - Gebruikersinput nodig? Mock dit voor nu even door dit gewoon even te 'hardcoden' , d.w.z. ken voor nu een vaste waarde toe waar nodig alsof die door een gebruiker is ingevoerd. Test je script uiteindelijk wel uit met verschillende waardes, zodat je weet dat het voor verschillende mogelijke input werkt.
 
 <br/>
 
-- **[READ]** Lees het timestamps_final.py voorbeeld grondig (neem hier echt de tijd voor) en:
-  - Breek het script op in verschillende onderdelen. Als je deze onderdelen in losse functies zou verwerken, hoe zou je dan deze functies noemen? Noteer passende functie namen (bijv. als comments).
-  - Maak een flow chart bij dit script.
-  - Het script is geschikt voor een ritme met één sample. Wat zou er aangepast moeten worden als je meerdere samples wilt afspelen? Hoe zou je dat doen, schets dit in pseudo code.
-  - Het script is momenteel niet geschikt voor gelijktijdig 'getriggerde' samples. Allereerst komt dit omdat het met maar één sample werkt. Maar ook als je meerdere samples gebruikt kun je niet twee samples tegelijkertijd afspelen. Hoe kan dit? Hoe kun je dit oplossen? Pas de code aan (of werk uit in pseudo code).
-
-<br/>
-
-- **[READ]** Functies in python
-  - Lees de volgende delen over functies op https://www.w3schools.com/python/python_functions.asp, lees:
+- **[READ][WRITE] Functions in python**
+  - **[READ]** Lees de volgende delen over functies op https://www.w3schools.com/python/python_functions.asp, lees:
     - Creating a Function
     - Calling a Function
     - Arguments
@@ -41,17 +33,40 @@ _**Let op: dit bouwt voort op de opdrachten uit week 1 & 2**_
     Optioneel:
     - Default Parameter Value
     - Passing a List as an Argument
-
-  - Lees de code in script 3e_functions, hoe werken de functies?
-  - **[WRITE][OPTIONAL]** Maak een kopie van het python script waarin je je generatie strategie hebt verwerkt. Deel je script op in delen en breng deze onder in functies. Besteed hierbij aandacht aan de naamgeving en wat de functie doet, is het een functie met een input en output? Of past het de input aan? Goed om dit aan de functie naam af te kunnen lezen!
-  - **[WRITE][OPTIONAL]** Maak een kopie van het timestamps_final.py script. Deel dit script op in delen en breng deze onder in functies. Besteed hierbij aandacht aan de naamgeving en wat de functie doet, is het een functie met een input en output? Of past het de input aan? Goed om dit aan de functie naam af te kunnen lezen!
+  - **[WRITE]** Leer jezelf werken met functies; maak een nieuw python script en schrijf  bijvoorbeeld:
+    - Een functie die het type van het argument print
+    - Een functie die twee parameters verwacht, namelijk `note_durations` en `bpm` en die een lijst met timestamps _returned_ die geconstrueerd is door de in `note_durations` waarden op basis van het bpm om te rekenen naar de juiste timestamp.
+    - Een functie die je een lijst mee geeft met namen van sample packs en die deze voorlegt aan de gebruiker, vervolgens de gebruiker een keuze laat maken en de index van de desbetreffende keuze uit de lijst _returned_.
 
 <br/>
 
-- **[WRITE][OPTIONAL]** Eigen generatie strategie + afspeelfunctionaleit.
+- **[READ][WRITE] Verwerking & verdiepingsopdracht sessie 3 - deel 1**
 
-  Maak een kopie van het python script waarin je je generatie strategie hebt verwerkt. Voeg hier de afspeel functionaliteit uit timestamps_final.py aan toe en speel je gegenereerde ritme af!
+  Deze opdracht is voor extra verwerking van de tijdens de sessie besproken content. In de map session3/sample_player staan voorbeeldscripts. Deze scripts bevatten oefeningen en opdrachten.
 
+  Ga met de voorbeeldscripts aan de slag: code lezen en begrijpen, denk per script na wat je als output verwacht, daarna pas het script uitproberen en vervolgens de opdrachten uitvoeren die in de comments in de code staan (EXERCISES).
+
+  _NOTE: Voor ervaren coders: sommige onderdelen in deze opdrachten kun je prima even overslaan._
+
+<br/>
+
+- **[READ] Verwerking & verdiepingsopdracht sessie 3 - deel 2**
+
+  Lees het timestamps_final.py voorbeeld grondig (neem hier echt de tijd voor) en:
+  - Breek het script op in verschillende onderdelen. Als je deze onderdelen in losse functies zou verwerken, hoe zou je dan deze functies noemen? Bedenk passende functie namen
+  - Maak een flow chart bij dit script.
+  - Het script is geschikt voor een ritme met één sample. Wat zou er aangepast moeten worden als je meerdere samples wilt afspelen? Hoe zou je dat doen, schets dit in pseudo code.
+  - Het script is momenteel niet geschikt voor gelijktijdig 'getriggerde' samples. Allereerst komt dit omdat het met maar één sample werkt. Maar ook als je meerdere samples gebruikt kun je niet twee samples tegelijkertijd afspelen. Hoe kan dit? Hoe kun je dit oplossen?
+
+<br/>
+
+- **[WRITE][OPTIONAL] Eigen generatie strategie + playback**
+
+  - Voeg de afspeel functionaliteit uit timestamps_final.py toe aan het script waarin je je generatie strategie hebt verwerkt en speel je gegenereerde ritme af!
+
+  - Deel je script op in delen en breng deze onder in functies. Besteed hierbij aandacht aan de naamgeving en wat de functie doet, is het een functie met een input en output? Of past het de input aan? Essentieel om dit aan de functie naam af te kunnen lezen! E.g.:
+    - `createTimestamps(note_durations, bpm)` --> je verwacht een return
+    - `offsetTimestamps(time_stamps, offset)` --> past de lijst met time_stamps aan en voegt een offset toe.
 
 
 # 2 - Voorbereiding volgende keer

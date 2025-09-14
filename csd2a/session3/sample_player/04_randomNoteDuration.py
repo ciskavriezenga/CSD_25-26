@@ -18,14 +18,16 @@ Used note durations are: sixteenth, eight, quarter notes
   Use this function.
 """
 
-import simpleaudio as sa
+import pygame
 import time
 import random
 
-#load audio files into a list
-samples = [sa.WaveObject.from_wave_file("../audioFiles/Pop.wav"),
-              sa.WaveObject.from_wave_file("../audioFiles/Laser1.wav"),
-              sa.WaveObject.from_wave_file("../audioFiles/Dog2.wav")]
+
+# init  mixer module and load audio files into a list
+pygame.init()
+samples = [ pygame.mixer.Sound("../../assets/plop.wav"),
+            pygame.mixer.Sound("../../assets/Laser1.wav"),
+            pygame.mixer.Sound("../../assets/Dog2.wav")]
 
 # create a list with possible note durations: sixteenth, eighth and a quarter note
 noteDurations = [0.25, 0.5, 1]
@@ -60,4 +62,3 @@ def playSamples(samples, intervals):
 # call the playSamples function 4 times
 for i in range(4):
   playSamples(samples, timeIntervals)
-
