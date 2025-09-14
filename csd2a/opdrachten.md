@@ -1,4 +1,8 @@
 # Opdrachten
+# 4 - Voorbereiding volgende kopieer
+- **[READ]**
+  - Lees over dictionaries op https://www.w3schools.com/python/python_dictionaries.asp
+  - Lees de code in script 3e_dictionaries, hoe werkt dit script? Waarvoor zijn dicationaries handig in de context van de eindopdracht?
 
 
 # 3 - Voorbereiding volgende keer
