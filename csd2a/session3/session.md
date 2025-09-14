@@ -12,6 +12,12 @@
 
 - Repos --> # commits even aanstippen; elke functionaliteit / afgebakend stuk code --> commit!
 
+- Gelukt met clonen van onze CSD repository?
+  - session3 --> merge met main, allemaal _pullen_
+  ```bash
+  git pull origin main
+  ```
+
 - Python
   - [CODE] simple playback of a simple rhythm
   - [CODE] time.sleep & deviation
