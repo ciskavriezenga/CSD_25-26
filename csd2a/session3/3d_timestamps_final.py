@@ -1,4 +1,4 @@
-import simpleaudio as sa
+import pygame
 import time
 
 # set values and create lists necessary for playing rhythm
@@ -28,8 +28,9 @@ for time_dur in time_durations:
 
 print("timestamp_seq:", timestamp_seq)
 
-# load a sample
-sample_plop = sa.WaveObject.from_wave_file("../assets/Plop.wav")
+# init  mixer module and load sample
+pygame.init()
+sample = pygame.mixer.Sound('../assets/plop.wav')
 
 # retrieve the first time stamp
 if timestamp_seq:
@@ -49,7 +50,7 @@ while True:
     # check if we passed the next timestamp,
     # if so, play sample and fetch new timestamp
     if(now >= ts):
-        sample_plop.play()
+        sample.play()
         if timestamp_seq:
             ts = timestamp_seq.pop(0)
         else:
