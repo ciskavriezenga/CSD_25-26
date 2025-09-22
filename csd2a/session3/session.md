@@ -5,6 +5,7 @@
 - Hoe gaat het?
   - Pseudo code werkend?
   - Vragen tot nu toe?
+  - SourceTree & GitHub Desktop GUI
   - Deadline: uiterlijk komende practicum - documentatie op git met daarin:
     - Beschrijving van de gekozen strategie, inclusief voordelen en nadelen
     - Strategie uitgewerkt in stappen en/of flow diagram
