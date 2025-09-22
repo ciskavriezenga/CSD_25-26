@@ -16,13 +16,14 @@ pause in between.
          need to be imported when you want to use it.
 """
 
-import simpleaudio as sa
+import pygame
 import time
 
-# load audio files into a list
-samples = [ sa.WaveObject.from_wave_file("../audioFiles/Pop.wav"),
-            sa.WaveObject.from_wave_file("../audioFiles/Laser1.wav"),
-            sa.WaveObject.from_wave_file("../audioFiles/Dog2.wav")]
+# init  mixer module and load audio files into a list
+pygame.init()
+samples = [ pygame.mixer.Sound("../../assets/plop.wav"),
+            pygame.mixer.Sound("../../assets/Laser1.wav"),
+            pygame.mixer.Sound("../../assets/Dog2.wav")]
 
 
 # play samples, wait 1 second in between
@@ -30,4 +31,3 @@ for sample in samples:
   print(sample) # display the sample object
   sample.play() # play sample
   time.sleep(1) # wait 1 second
-

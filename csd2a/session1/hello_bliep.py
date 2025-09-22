@@ -5,7 +5,7 @@ import time
 pygame.init()
 
 # load and play the sample
-sample = pygame.mixer.Sound('./plop.wav')
+sample = pygame.mixer.Sound('../assets/plop.wav')
 sample.play()
 
 # wait till sound is done playing before exiting

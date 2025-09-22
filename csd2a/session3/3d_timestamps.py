@@ -21,18 +21,30 @@ print("time_durations", time_durations)
 pygame.init()
 sample = pygame.mixer.Sound('../assets/plop.wav')
 
-sample.play()
 # transform time durations to a sequence of timestamps
-# todo
+timestamps = []
+t = 0
+for time_dur in time_durations:
+    timestamps.append(t)
+    t = t + time_dur
 
+print(timestamps)
 # retrieve the first time stamp (if it exist - else exit)
-# todo
+ts = timestamps.pop(0)
+playing_rhythm = True
+t_start = time.time()
+
+while(playing_rhythm):
+    t_delta = time.time() - t_start
+    sample.play()
+
+# TODO
 
 # store the current time
-# todo
+# TODO
 
 # iterate through time sequence and play sample
-# todo
+# TODO
 
 # wait till last sample is done playing before exit
 time.sleep(time_durations[-1])

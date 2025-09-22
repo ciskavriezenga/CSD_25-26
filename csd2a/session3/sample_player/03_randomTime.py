@@ -18,14 +18,17 @@ Used durations are: 0.125, 0.25 and 0.5 seconds
   Use this function.
 """
 
-import simpleaudio as sa
+import pygame
 import time
 import random
 
-# load audio files into a list
-samples = [sa.WaveObject.from_wave_file("../audioFiles/Pop.wav"),
-              sa.WaveObject.from_wave_file("../audioFiles/Laser1.wav"),
-              sa.WaveObject.from_wave_file("../audioFiles/Dog2.wav")]
+
+# init  mixer module and load audio files into a list
+pygame.init()
+samples = [ pygame.mixer.Sound("../../assets/plop.wav"),
+            pygame.mixer.Sound("../../assets/Laser1.wav"),
+            pygame.mixer.Sound("../../assets/Dog2.wav")]
+
 
 # create a list to hold the timeIntervals 0.25, 0.5, 1.0
 timeIntervals = [0.25, 0.5, 1]
@@ -44,4 +47,3 @@ for sample in samples:
 
   # wait some time
   time.sleep(timeIntervals[randomIndex])
-

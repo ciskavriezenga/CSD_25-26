@@ -11,17 +11,31 @@ import time
 # ___ retrieve all necessary values and lists necessary for playing rhythm ___
 # TODO retrieve note durations from input
 
-# TODO retrieve BPM and calculate corresponding quarternote duration
+note_durations = [1, 1, 2, 1]
+num_notes = len(note_durations)
+
+# TODO retrieve BPM
+bpm = 120
+
+# calculate corresponding quarternote duration in time
+quarternote_dur = 60 / bpm
 
 # TODO transform note durations to sequence of time durations (sec)
+time_durations = []
+
+for note_dur in note_durations:
+    time_dur = note_dur * quarternote_dur
+    time_durations.append(time_dur)
+
+print("note_durations: ", note_durations)
+print("time_durations: ", time_durations)
 
 # init  mixer module and load sample
 pygame.init()
 sample = pygame.mixer.Sound('../assets/plop.wav')
 
-
 # ___ play rhythm ___
-sample.play()
-time.sleep(sample.get_length())
-
 # TODO play sample and pause according to time duration
+for time_dur in time_durations:
+    sample.play()
+    time.sleep(time_dur)
