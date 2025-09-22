@@ -1,8 +1,30 @@
 # Opdrachten
 # 4 - Voorbereiding volgende kopieer
-- **[READ]**
+- **[READ] Dictionaries**
   - Lees over dictionaries op https://www.w3schools.com/python/python_dictionaries.asp
-  - Lees de code in script 3e_dictionaries, hoe werkt dit script? Waarvoor zijn dicationaries handig in de context van de eindopdracht?
+  - Indien script 4c en 4d nog niet besproken zijn tijdens sessie 4, lees dan in session.md de bijgaande uitleg en neem volgens die 'aanwijzingen' deze twee voorbeelden zelfstandig door.
+  - Voorbeeld script 4e is bedoeld voor wie graag alles overziet en de behoefte voelt om iets meer van dictionaries te begrijpen vooraf hier mee te willen / kunnen werken.
+  - Voorbeeld script 4f is bedoeld voor de al wat ervaren coders, een voorbeeld van hoe je met functies dictionaries kunt genereren.  
+
+
+- **[WRITE] Eigen generatie strategie + playback & functies**
+  _= HERHALING VAN EERDERE OPTIONELE OPDRACHT_
+
+  - Voeg de afspeel functionaliteit uit timestamps_final.py toe aan het script waarin je je generatie strategie hebt verwerkt en speel je gegenereerde ritme af!
+
+  - Deel je script op in delen en breng deze onder in functies. Besteed hierbij aandacht aan de naamgeving en wat de functie doet, is het een functie met een input en output? Of past het de input aan? Essentieel om dit aan de functie naam af te kunnen lezen! E.g.:
+    - `createTimestamps(note_durations, bpm)` --> je verwacht een return
+    - `offsetTimestamps(time_stamps, offset)` --> past de lijst met time_stamps aan en voegt een offset toe.
+
+    NOTE: voorkeur gaat doorgaans uit naar een functie met een return, zodat je bij het gebruik van de functies in de code eenvoudig de input & output flow kunt lezen. Komt vaak de _readability_ ten goede.
+
+
+- **[WRITE] Eigen generatie strategie & events**
+  - TODO toelichting
+
+- **[WRITE][OPTIONAL] Eigen generatie strategie & UI**
+  - TODO toelichting
+
 
 
 # 3 - Voorbereiding volgende keer

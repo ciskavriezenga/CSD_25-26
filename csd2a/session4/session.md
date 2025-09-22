@@ -78,5 +78,5 @@ NOTE: Do not worry if you still find Git a hurdle. Since working with git is new
   - **Example 4d** Example demonstrating how to sort a list with dictionaries
   _@D: short in time? skip this!_
 
-  - **Example 4e** Contains an introduction to dictionaries - intended for self-study
-  - - **Example 4f** Contains an example where a function creates and returns a dictionary  - intended for self-study, see opdrachtend.md
+  - **Example 4e** Contains an introduction to dictionaries - intended for self-study, **see opdrachten.md**
+  - - **Example 4f** Contains an example where a function creates and returns a dictionary  - intended for self-study, **see opdrachten.md**
