@@ -2,7 +2,7 @@
 In this example the usage of functions to generate a list with dictionaries is
 demonstrated.
 
-EXAMPLE FOR EXPERIENCED CODERS 
+EXAMPLE FOR EXPERIENCED CODERS
 """
 
 import random
@@ -35,6 +35,7 @@ scale_triad_types = {
 
 def triads_for_scale(scale):
     """
+    TODO - update this function comment
     Returns the triad at the index of a given scale.
 
     parameter scale: the scale dictionary, for now either minor or minor, with
