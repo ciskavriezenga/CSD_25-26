@@ -25,6 +25,9 @@ notes = [
 ]
 
 
+
+
+
 print("--- note List ---")
 for note in notes:
     print(note)

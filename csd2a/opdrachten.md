@@ -1,5 +1,33 @@
 # Opdrachten
-# 4 - Voorbereiding volgende kopieer
+# 5 - Voorbereiding volgende keer
+
+___
+## "Rectificatie"
+Tijdens de sessie refereerde ik met literals aan de _variable types int, float, str, bool_, etc... en hoe in een functie een bijv. int parameter als kopie benaderd wordt. Ik twijfelde al even of ik de goede term gebruikte en zat inderdaad fout. Ik was even in de war met Javascript waar je het 'Primitive' types noemt. In python noem je dit de zogenaamde _immutable types_.
+Waar je bijv. een list _(mutable type)_ kunt aanpassen, kun je een int variable niet aanpassen, bij het _assignen_ van een andere waarde wordt er een nieuw object geconstrueerd bijv.:
+```python
+a = 10
+b = a # b references 10 as well
+a = 20 # a new object is created to which a references
+```
+Zo ook bij een functie, wanneer je de parameter aanpast wordt er een nieuw object (dus een nieuwe int, float, str, bool etc.) aangemaakt. Je oorspronkelijke object dat je als variable mee gaf aan de functie blijft dus ongewijzigd
+Kortom - zoals ik het uitlegde, maar net andere terminologie.
+___
+
+## Opdrachten week 5
+Alles tot nu toe, inclusief dictionary
+!!!!!!!!
+
+Wil je verder werken? Kijk naar:
+
+**[WRITE][optional] Eigen generatie strategie & UI**
+
+Zie week 4 en UI voorbeelden (5a, 5b en 5c) in session 5
+
+
+
+
+# 4 - Voorbereiding volgende keer
 - **[READ] Dictionaries**
   - Lees over dictionaries op https://www.w3schools.com/python/python_dictionaries.asp
   - Indien script 4c en 4d nog niet besproken zijn tijdens sessie 4, lees dan in session.md de bijgaande uitleg en neem volgens die 'aanwijzingen' deze twee voorbeelden zelfstandig door.
@@ -58,9 +86,9 @@
   - Voeg de handle_events functie toe uit het 4c voorbeeld & de afspeel functionaliteit uit timestamps_final.py toe aan je script. Pas de afspeel code aan zodat de events uit sorted_events afgespeeld kunnen worden met de handle_events functie.
 
 - **[WRITE][OPTIONAL] Eigen generatie strategie & UI**
-  - Maak een nieuw script in dezelfde folder als je generatie script folder van de vorige opracht (die hierboven beschreven) genaamd UI.py.
+  - Maak een nieuw script in dezelfde folder als je generatie script folder van de vorige opdracht (die hierboven beschreven) genaamd UI.py.
   - Zet in dit script op een rij welke input er van de gebruiker nodig is voor je gehele programma (bpm, maatsoort, etc.). Denk hierbij ook aan het wel / niet wegschrijven van het gegenereerde ritme als midi file
-  - Werk een paar gebruiker input vragen uit in losse functies, bijvoorbeeld een functie voorhet opvragen van de bpm, voor de maatsoort etc.. Denk hierbij ook aan het valideren van de gegeven input, zodat een bpm niet tekst bevat of bijv een te hoge / lage of negatieve waarde.
+  - Werk een paar gebruiker input vragen uit in losse functies, bijvoorbeeld een functie voor het opvragen van de bpm, voor de maatsoort etc.. Denk hierbij ook aan het valideren van de gegeven input, zodat een bpm niet tekst bevat of bijv een te hoge / lage of negatieve waarde.
   - Probeer een generieke functie op te stellen die voor verschillende vragen te gebruiken is, waarbij je bijvoorbeeld de vraag en range meegeeft.
 
 # 3 - Voorbereiding volgende keer
