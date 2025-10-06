@@ -53,6 +53,6 @@ def retrieve_user_option(question, options):
         selected_option -= 1
 
     return selected_option
-    
+
 selected_index = retrieve_user_option(example_question, example_options)
 print("Selected drumkit: ", example_options[selected_index])
