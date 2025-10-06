@@ -31,12 +31,13 @@ def validate_int_in_inclusive_range(value, range_low, range_high):
     try:
         int_value = int(value)
         if (int_value >= range_low and int_value <= range_high):
+            # int and in range
             return True;
-        return False
     except:
+        # no valid int
         return False
-
-    return True
+    # not in range
+    return False
 
 def retrieve_user_option(question, options):
     """
@@ -56,7 +57,7 @@ def retrieve_user_option(question, options):
     while (not correctInput):
         user_input = retrieve_user_input(question, options)
         # validate user input
-        if(validate_int_in_inclusive_range(user_input, 0, len(options))):
+        if(validate_int_in_inclusive_range(user_input, 1, len(options))):
             # user input is in given range
             selected_option = int(user_input)
             correctInput = True
