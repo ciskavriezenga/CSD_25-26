@@ -3,7 +3,7 @@ correctInput = False
 bpm = 120
 
 while (not correctInput):
-    user_bpm = input("enter a bpm")
+    user_bpm = input("enter a bpm (leave empty for default 120)")
 
     # check if we 'received' an empty string
     if not user_bpm:

@@ -1,20 +1,5 @@
 
-
-def retrieve_user_option(question, options)
-    """
-    Presents the user with a the provided question and options to choose from
-    and then returns the index of the selected option.
-
-    parameter question: the question to ask the user
-    paramter options: the options the user can choose from
-
-    question type: string
-    options type: list
-    """
-
-    # TODO - implement together
-    # NOTE: also implement validation
-
+# TODO - implement
 
 def retrieve_value(question, range_low, range_high, whole_number = false)
     """
@@ -31,6 +16,6 @@ def retrieve_value(question, range_low, range_high, whole_number = false)
     range_high type: number
     whole_number type: boolean
     """
-    
+
     # TODO - implement together
     # NOTE: also implement validation
