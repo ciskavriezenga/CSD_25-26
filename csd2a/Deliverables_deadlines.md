@@ -22,16 +22,17 @@
 
 _Disclaimer: enkel de mogelijkheid om te presenteren wanneer het werkt_
 
-- **Presentatie**, van 3 minuten:
-  - 1 minuut - live demo werking programma
+- **Presentatie**, van **4 minuten**:
+  - 2 minuut - live demo werking programma
   _(van te voren oefenen en timen)_
     - Eén goede user flow
     - Eén met verkeerde input (error flow) ter demonstratie van validatie
+  - _+1 minuut in het geval van vergaande extra features_
   - 2 minuut - verdere toelichting
     - Essentie van toegepaste generatie strategie
     - Deel eventuele extra focus op onderdelen (bijv. UI flow, ritme generatie algoritme, interessante sound, etc.)
     - Reflectie **= zeer belangrijk!!!!!**
-      - Eventuele struggles
-      - Takeaways
+      - (Eventuele) struggles én wat lekker liep _(waar ben je trots op qua proces / aanpak / houding / etc.)_
+      - Takeaways **= aller-aller-aller-belangrijkste!!!!!**
 
 - **Documentatie**, zoals hierboven beschreven onder "_Het ontwerp van de begoogde generatie strategie_", aangevuld met de slides _(mag als losse pdf)_ en een uren overzicht met een schatting van het aantal uur per week _(bijv. in een uren_overzicht.md)_.
