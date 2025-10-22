@@ -43,7 +43,7 @@ Ga in de terminal naar de map helloWorld in deze map.
   ```
 
 #### 2b - meerdere projecten ...
-Tijdens 2b werk je aan meerdere projecten. Dat kan prima met cmake, we hebben dan op het toplevel  niveau van je csd hoofd directory een CMakeLists.txt. Door meerdere CMakeLists.txt in subfolders te gebruiken kunnen er meerdere projecten
+Tijdens 2b werk je aan meerdere opdrachten en dus in meerdere folders. Dat kan prima met cmake, we hebben dan op het toplevel  niveau van je csd hoofd directory een CMakeLists.txt. Door meerdere CMakeLists.txt in subfolders te gebruiken kunnen er meerdere projecten
 gebuild worden. Dit bespreken we tijdens het eerste practicum 2b.
 
 ---
@@ -87,5 +87,5 @@ Ga in de terminal naar de map helloWorld in deze map.
   ```
 
 #### 2b - meerdere projecten ...
-Tijdens 2b werk je aan meerdere projecten. Dat kan prima met cmake, we hebben dan op het toplevel  niveau van je csd hoofd directory een CMakeLists.txt. Door meerdere CMakeLists.txt in subfolders te gebruiken kunnen er meerdere projecten
+Tijdens 2b werk je aan meerdere opdrachten en dus in meerdere folders. Dat kan prima met cmake, we hebben dan op het toplevel  niveau van je csd hoofd directory een CMakeLists.txt. Door meerdere CMakeLists.txt in subfolders te gebruiken kunnen er meerdere projecten
 gebuild worden. Dit bespreken we tijdens het eerste practicum 2b.
