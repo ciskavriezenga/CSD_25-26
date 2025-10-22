@@ -9,61 +9,56 @@
   ```bash
   xcode-select --install
   ```
+- zou kunnen zijn dat je hierna even moet xcode openen omdat ze hoere zijn en nog 500gb aan stuff moeten installeren
 
-##### Installeer IDE
-- Er zijn verschillende opties qua IDE, verschillende smaken.
-  - Pulsar in combinatie met cmake runnen in de terminal
-  - clion, dan kun je vanuit de IDE builden en runnen, adhv cmake
-    1. github studenten account regelen
-    2. clion installeren
+##### Installeer CMAKE 
+- run in de terminal:<br>
+  ```bash
+  brew install cmake    
+  ```
+    
+##### Compilen
+- om de build files te generen run het volgende vanuit de _TOPLEVEL_ van je project (csd2 mapje waar je CMakeList.txt zit) 
+  ```bash
+  cmake -S . -B build
+  ```
+  `-S` locatie voor de SOURCE 
+  `-B` locatie waar je de build files wilt hebben
 
-  - Vscodium
-    ```brew install --cask vscodium```
-    - installeer de c/c++ runner in vscodium
-
-
+- om daadwerkelijk te bouwen, `cd` naar welk project je wilt bouwen en run: 
+  ```bash
+  make
+  ```
+  (gebruik `-jX` om build te over meerdere cores uit te voeren. X = de hoeveelheid cores)
 ---
 
 ### WINDOWS
-##### Installeer g++
-- Er zijn verschillende manieren om g++ op windows te installeren. Maar ...
-  we werken met JUCE _(we zijn overgegaan op JUCE en cmake ipv jack audio en makefiles, zodat er op Windows gewerkt kan worden)_ en om daar mee te werken kwamen we erachter dat de de compiler installeren vanuit visual studio installer wel werkt en compiler via minq niet werkt. Mocht je handig zijn en een andere manier weten om JUCE op windows met compiler werkend te krijgen; we horen het graag!
-  -
+##### Installeer MSVC
+- Installeer de C++ Compile via de Visual Studio Installer 
+  [[https://visualstudio.microsoft.com/downloads/]]
+  (download de Community versie)
 
 
+##### Installeer CMAKE
+- Ook via de website
+    [[https://cmake.org/download/ ]]
+LET OP!<br>
+    - download de installer, niet de source
+    - lees de installer goed, zodat CMAKE in de PATH wordt gezet
+  
 
-- Windows start menu --> open windows power shell (zoek op 'power'), run daarin:
+##### Compilen
+- om de build files te generen run het volgende vanuit de _TOPLEVEL_ van je project (csd2 mapje waar je CMakeList.txt zit) 
+  ```bash
+  cmake -S . -B build
+  ```
+  `-S` locatie voor de SOURCE 
+  `-B` locatie waar je de build files wilt hebben
 
-  ```winget install MSYS2.MSYS2```
-
-  (https://www.msys2.org/)
-
-
-- open msys2 terminal en run:
-
-  ```pacman -S mingw-w64-ucrt-x86_64-gcc```
-
-
-- open file explorer en navigeer naar c directory en selecteer map msys64, naar map ucrt64, map bin, zitten g++.exe en gcc.exe erin? (of g++ en gcc)
-  - --> correcte locatie, kopier het pad.  
-
-
-- zoek in windows menu naar environment variables en open (click ev. op environment variables)
-  - dubbelclick onder user variables 'Path', click in het nieuwe venster op new en paste je gekopieerde path
-
-
--  open windows power shellen run
-  ```gcc --version```
-  <br>*wordt die gevonden?*
-
-
-- Installeer vscodium en run in windows power shell:
-
-  ```winget install VSCodium.VSCodium```
-
-  *(Of vraag een github studenten account aan en installeer clion
-(dit hebben we nog niet getest mét de g++ install)).*
-
+- om daadwerkelijk te bouwen, `cd` naar welk project je wilt bouwen en run:
+  ```bash
+  cmake --build . 
+  ```
 
 ---
 
@@ -84,3 +79,21 @@ https://vscodium.com/
 
 
 ---
+
+##### Installeer IDE
+- Er zijn verschillende opties qua IDE, verschillende smaken.
+  - Pulsar in combinatie met cmake runnen in de terminal
+  - clion, dan kun je vanuit de IDE builden en runnen, adhv cmake
+    1. github studenten account regelen
+    2. clion installeren
+
+  - Vscodium
+    ```brew install --cask vscodium```
+    - installeer de c/c++ runner in vscodium
+
+- NVIM TIP:
+  - clangd is je vriend (LSP)
+  - om clangd goed te laten werken met cmake heeft ie een `compile_commands.json` nodig. Dit maak je door het volgende te runnen:
+  ```bash
+  cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+  ```
