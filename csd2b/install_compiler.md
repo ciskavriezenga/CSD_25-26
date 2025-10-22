@@ -13,12 +13,13 @@
 
 ##### Installeer CMAKE 
 - run in de terminal:<br>
+
   ```bash
   brew install cmake    
   ```
     
 ##### Compilen
-- om de build files te generen run het volgende vanuit de _TOPLEVEL_ van je project (csd2 mapje waar je CMakeList.txt zit) 
+- om de build files te generen run het volgende vanuit de _TOPLEVEL_ van je project (csd2 mapje waar je CMakeList.txt zit): 
   ```bash
   cmake -S . -B build
   ```
@@ -29,7 +30,7 @@
   ```bash
   make
   ```
-  (gebruik `-jX` om build te over meerdere cores uit te voeren. X = de hoeveelheid cores)
+  (gebruik `-jX` om build over meerdere cores uit te voeren. X = de hoeveelheid cores)
 ---
 
 ### WINDOWS
@@ -41,7 +42,7 @@
 
 ##### Installeer CMAKE
 - Ook via de website
-    [[https://cmake.org/download/ ]]
+    [[https://cmake.org/download/ ]]<br>
 LET OP!<br>
     - download de installer, niet de source
     - lees de installer goed, zodat CMAKE in de PATH wordt gezet
