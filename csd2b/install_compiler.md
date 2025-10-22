@@ -36,13 +36,13 @@
 ### WINDOWS
 ##### Installeer MSVC
 - Installeer de C++ Compile via de Visual Studio Installer 
-  [[https://visualstudio.microsoft.com/downloads/]]
+  https://visualstudio.microsoft.com/downloads/
   (download de Community versie)
 
 
 ##### Installeer CMAKE
 - Ook via de website
-    [[https://cmake.org/download/ ]]<br>
+    https://cmake.org/download/<br>
 LET OP!<br>
     - download de installer, niet de source
     - lees de installer goed, zodat CMAKE in de PATH wordt gezet
@@ -88,8 +88,12 @@ https://vscodium.com/
     1. github studenten account regelen
     2. clion installeren
 
-  - Vscodium
+  - Vscodium<br>
+    Mac:
     ```brew install --cask vscodium```
+    Windows:<br>
+    https://vscodium.com <br>
+
     - installeer de c/c++ runner in vscodium
 
 - NVIM TIP:
