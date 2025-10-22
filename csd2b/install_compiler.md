@@ -30,7 +30,12 @@
   ```bash
   make
   ```
-  (gebruik `-jX` om build over meerdere cores uit te voeren. X = de hoeveelheid cores)
+  (gebruik `-jX` om build over meerdere cores uit te voeren. X = de hoeveelheid cores)<br>
+
+- je executable is te vinden in:
+  ```
+  build/PROJECT/PROJECT_artefacts
+  ```
 ---
 
 ### WINDOWS
@@ -61,6 +66,10 @@ LET OP!<br>
   cmake --build . 
   ```
 
+- je executable is te vinden in:
+  ```
+  build/PROJECT/PROJECT_artefacts
+  ```
 ---
 
 
