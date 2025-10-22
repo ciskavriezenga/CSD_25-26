@@ -19,7 +19,7 @@
 
   - je executable is te vinden in:
     ```
-    build/PROJECT/build
+    build/
     ```
 
 #### Compilen van het hello world voorbeeld in deze map
@@ -63,7 +63,7 @@ gebuild worden. Dit bespreken we tijdens het eerste practicum 2b.
   ```
 - je executable is te vinden in:
   ```
-  build/PROJECT/build
+  build/
   ```
 
 #### Compilen van het hello world voorbeeld in deze map
