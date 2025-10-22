@@ -9,7 +9,7 @@
   ```bash
   xcode-select --install
   ```
-- zou kunnen zijn dat je hierna even moet xcode openen omdat ze zijn en nog 500gb aan stuff moeten installeren
+- zou kunnen zijn dat je hierna even moet xcode openen omdat er nog allemaal SDK's en developer frameworks geinstalleerd moeten worden
 
 ##### Installeer CMAKE 
 - run in de terminal:<br>
