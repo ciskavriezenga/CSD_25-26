@@ -6,7 +6,7 @@ _Gpp, IDE & cmake al vooraf aan het blok werkend gekregen?_
 </br>
 
 ## Introductie Slides
-_Zie ook ../slides/Sessie1_introductie.pdf_
+_Zie ../slides/Sessie1_introductie.pdf_
 
 </br>
 
@@ -33,3 +33,6 @@ _Voor het compilen zie compilen.md_
 
   Een eenvoudige applicatie ter introductie van een class in c++ én
   OOP-association, d.w.z. een 'has a' relationship.
+
+## Introductie tot OOP
+  _Zie ../slides/Sessie1_inheritance.pdf_
