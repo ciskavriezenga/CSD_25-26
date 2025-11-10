@@ -36,3 +36,6 @@ _Voor het compilen zie compilen.md_
 
 ## Introductie tot OOP
   _Zie ../slides/Sessie1_inheritance.pdf_
+
+
+## NOTE: voorbeeld 4 is bedoeld voor zelfstudie, zie ../assignments/1_assignments.md

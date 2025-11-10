@@ -49,4 +49,3 @@ Speaker::Speaker() {
 int main() {
   Speaker aSpeaker;
 };
-
