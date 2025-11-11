@@ -20,7 +20,7 @@ EN twee van onderstaande (of één uit onderstaande én een goed geformuleerde e
 
 </br>
 
-Noteer je selectie en onderbouw je keuze in één alinea in een document genaamd "learningGoals" en voeg deze toe aan je al bestaande repository in folder
+Noteer je selectie en onderbouw je keuze in één alinea in een document genaamd "learningGoals", beschrijf hoe je denkt dit leerdoel te behalen (en reflecteren hierop?) en voeg deze toe aan je al bestaande repository in folder
 csd2b/synthSong/..
 
 </br>
