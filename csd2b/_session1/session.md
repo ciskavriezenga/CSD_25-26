@@ -2,6 +2,8 @@
 
 ## Voorbereiding gelukt?
 _Gpp, IDE & cmake al vooraf aan het blok werkend gekregen?_
+_Zie voorbereiding folder_
+
 
 </br>
 
