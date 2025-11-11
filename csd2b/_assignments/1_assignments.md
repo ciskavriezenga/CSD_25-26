@@ -32,7 +32,7 @@ _**Voorbereiding** - indien nog niet gedaan, zie map csd2b/voorbereiding_
   pas waar nodig de code van Pet aan.
 </br>
 
-- 2.3 *[WRITE]* Eigen classes
+- 2.3 **[WRITE]** Eigen classes
 
   Bedenk zelf een aantal classes en werk deze uit in werkende voorbeelden,
   waarbij je logt naar de console en om input vraagt.
