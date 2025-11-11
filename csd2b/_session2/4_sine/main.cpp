@@ -7,7 +7,7 @@ int main() {
   // create sine wave
   Sine sine(1);
   std::cout << "Sine frequency: " << sine.getFrequency() << "\n";
-x
+
   // write 1 second of samples to file
   // second parameter - overwrite is set to true
   WriteToFile fileWriter("output.csv", true);
