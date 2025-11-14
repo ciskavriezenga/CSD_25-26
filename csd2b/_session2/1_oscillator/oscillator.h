@@ -7,6 +7,6 @@ class Oscillator
 {
 public:
   Oscillator();
-  ~Oscillator();
+
   // TODO add setters and getters
 };

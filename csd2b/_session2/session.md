@@ -1,30 +1,54 @@
-#Session 3
+# Session 3
 
-##Content
+## Hoe gaat het?
+- voortgang 
+- vragen
+- repos check
 
-* #### Sine wave generation
-  * Sine function  
-  * Sine function in audio context
-  <u>**see plotSine.R**</u> - _the generation of a sine wave in audio context step by step (.R file is a script in the R language)_
-  * Sine in code example - plotting the resulting text output
-  <u>**example: 01_sine**</u>
+## Content
+- ### Peer reviews
+  _max 20 min. invullen, 5 min. resultaten op een rij + bespreken eventuele herziening._  
+  - peer review loodjes trekken 
 
-* #### Non treated / additional examples
+- ### Access specifiers
+  _max 20 min. dan korte pauze_
+  - 1_oscillator example
+
+- ### Sine wave generation
+  _60 min. max., dwz eerste deel max 30 min., dan 30 min. zelfstandig door precission + sine output code werken_
+
+  _Continuous and dicsrete time, expressed as a function of phase_ 
+
+  - Sine function unit circle op bord
   
-  * #### circular buffer
-    additional example - circular buffer
-    <u>**example: melody**</u>
-    _containing an example of a very simplified circular buffer, which we did not treat yet!_
+  - Sine function in audio context
+  <u>**see 2_sine_information.R**</u> - _the generation of a sine wave in audio context step by step (.R file is a script in the R language)_
+
+  - _Flip the classroom_:
+  
+    - float precision
+      <u>**example: 3_precision**</u> 
+    
+    - Sine in code example - plotting the resulting text output
+      <u>**example: 4_sine**</u> & plotting output (plot.py)
+      </br>
+
+- ### Sounding sine 
+  _20 min audiocallback_
+  <u>**example: 5_soundingSine**</u>
+  - audio callback
+  - realtime sounding sine
+
+- ### Discuss assignments for next week
+  _20 min_
+  - Amongst others - install juce!  
 
 
-
-
-## Plotting
-Multiple options exist to plot data.
-</br>
+### References - plotting data
 The R language, or R-Studio:
 https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu
 </br>
+
 Or e.g. mathplotlib.
 The directory 01_sine contains a python script that uses this library to plot the data.
 
@@ -33,4 +57,5 @@ pip3 install mathplotlib
 cd 01_sine
 python3 plot.py
 ```
-</br>
+
+

@@ -1,1 +1,2 @@
 add_subdirectory(_session2)
+add_subdirectory(_assignments)

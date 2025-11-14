@@ -9,7 +9,7 @@ _**Voorbereiding** - indien nog niet gedaan, zie map csd2b/voorbereiding_
 = Deliverable, _DEADLINE: Sessie 2_
 
 
-</br>
+<br></br>
 
 
 ## 2 Oefenen met C++
@@ -18,7 +18,7 @@ _**Voorbereiding** - indien nog niet gedaan, zie map csd2b/voorbereiding_
 
   Kopier voorbeeld _3_speaker_ en voeg een Woofer class toe.
   #OOP-association = 'has a' relationship.
-</br>
+  <br></br>
 
 - 2.2 **[READ][WRITE]** Simple Inheritance
 
@@ -30,19 +30,18 @@ _**Voorbereiding** - indien nog niet gedaan, zie map csd2b/voorbereiding_
   - **[WRITE]** Voeg een extra _derived class_ toe die erft van de base class Pet.
   - **[OPTIONAL][WRITE]** Voeg een base class Animal toe waar Pet van erft en
   pas waar nodig de code van Pet aan.
-</br>
+    <br></br>
 
 - 2.3 **[WRITE]** Eigen classes
 
   Bedenk zelf een aantal classes en werk deze uit in werkende voorbeelden,
   waarbij je logt naar de console en om input vraagt.
-</br>
+  <br></br>
 
 - 2.3 **[OPTIONAL][WRITE]** EXTRA: Coffeemaker
 
   Zie _assignments\extra directory, assignment "Coffeemaker.pdf"
-</br>
-
+  <br></br>
 - 2.4 **[OPTIONAL][WRITE]** EXTRA 2: Scale
 
   Zie _assignments/extra directory, assignment "Scale.pdf"
