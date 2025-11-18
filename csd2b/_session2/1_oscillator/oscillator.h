@@ -9,4 +9,6 @@ public:
   Oscillator();
 
   // TODO add setters and getters
+
+
 };

@@ -1,5 +1,5 @@
 # generate and display a sinewave with wavelength = 2pi
-curve(expr=sin, from=0, to=2*pi, xname = "t")
+curve(expr=sin, from=0, to=2*pi, xname = "x")
 abline(h = 0, lty = 1, col = "gray")
 
 # generate and display a sinewave with 

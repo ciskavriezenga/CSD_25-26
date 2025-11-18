@@ -3,7 +3,7 @@
 
 ## 1. Leerdoelen en design 
 ```c++ 
-if(perReviewScore <= 5) { 
+if(peerReviewScore <= 5) { 
     redo = true; 
 } 
 ```
@@ -30,9 +30,9 @@ if(perReviewScore <= 5) {
   - Lees over **destructors** https://www.tutorialspoint.com/cplusplus/cpp_destructors.htm
   - Wanneer zou een destructor in MT context nodig zijn? 
 
+2.2 **[INSTALL]** Installeer Juce,  volg de md met instructies in _sessie2/6_JuceTest 
 
-
-2.3 **[WRITE] Inheritance - Oscillator, Sine, Saw and Square **
+2.3 **[WRITE] Inheritance - Oscillator, Sine, Saw and Square**
 _DISCLAIMER: Voor het inheritance deel in deze opdracht moet je echt 1_assigments.md 2.2 Simple Inheritance hebben 
 uitgevoerd en / of **al wat vertrouwd zijn met het implementeren van inheritance** in c++, dwz. hier ook zelf mee hebben 
 geoefend afgelopen week. _

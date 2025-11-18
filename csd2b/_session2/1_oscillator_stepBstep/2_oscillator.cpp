@@ -5,7 +5,12 @@ public:
   Oscillator();
   Oscillator(float frequency);
   ~Oscillator();
+  float getFrequency();
+  void setFrequency(float frequency);
 
+protected:
+
+private:
   float freq;
 };
 
@@ -26,12 +31,26 @@ Oscillator::~Oscillator()
   std::cout << "Inside Oscillator destructor\n";
 }
 
+float Oscillator::getFrequency()
+{
+  return freq;
+}
+
+void Oscillator::setFrequency(float frequency)
+{
+  // TODO - VALIDATION!!!!
+  freq = frequency;
+}
+
+
 
 
 int main ()
 {
   std::cout << "\nin main\n";
   Oscillator osc;
-  std::cout << "02_oscillator's frequency: " << osc.freq << "\n";
+  osc.setFrequency(1000);
+  std::cout << "02_oscillator's frequency: " << osc.getFrequency() << "\n";
+
   return 0;
 }

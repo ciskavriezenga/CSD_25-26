@@ -1,14 +1,14 @@
-# Session 3
+# Session 2
 
 ## Hoe gaat het?
-- voortgang 
+- voortgang
 - vragen
 - repos check
 
 ## Content
 - ### Peer reviews
   _max 20 min. invullen, 5 min. resultaten op een rij + bespreken eventuele herziening._  
-  - peer review loodjes trekken 
+  - peer review loodjes trekken
 
 - ### Access specifiers
   _max 20 min. dan korte pauze_
@@ -17,23 +17,23 @@
 - ### Sine wave generation
   _60 min. max., dwz eerste deel max 30 min., dan 30 min. zelfstandig door precission + sine output code werken_
 
-  _Continuous and dicsrete time, expressed as a function of phase_ 
+  _Continuous and dicsrete time, expressed as a function of phase_
 
   - Sine function unit circle op bord
-  
+
   - Sine function in audio context
   <u>**see 2_sine_information.R**</u> - _the generation of a sine wave in audio context step by step (.R file is a script in the R language)_
 
   - _Flip the classroom_:
-  
+
     - float precision
-      <u>**example: 3_precision**</u> 
-    
+      <u>**example: 3_precision**</u>
+
     - Sine in code example - plotting the resulting text output
       <u>**example: 4_sine**</u> & plotting output (plot.py)
       </br>
 
-- ### Sounding sine 
+- ### Sounding sine
   _20 min audiocallback_
   <u>**example: 5_soundingSine**</u>
   - audio callback
@@ -59,3 +59,5 @@ python3 plot.py
 ```
 
 
+## PEER REVIEWS RESULTATEN
+https://docs.google.com/spreadsheets/d/1WLhsuru4qRHQEATYAHPv2ZS9snWQOEHeCIZu4o_MflQ/edit?usp=sharing

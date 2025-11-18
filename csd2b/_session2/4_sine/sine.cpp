@@ -1,9 +1,9 @@
 #include "sine.h"
 #include "math.h"
 
-Sine::Sine(float frequency) {
+Sine::Sine(float freq) {
   // initialize members
-  this->frequency = frequency;
+  frequency = freq;
   std::cout << "Sine - constructor\n";
 }
 

@@ -5,7 +5,7 @@
 
 int main() {
   // create sine wave
-  Sine sine(1);
+  Sine sine(2);
   std::cout << "Sine frequency: " << sine.getFrequency() << "\n";
 
   // write 1 second of samples to file

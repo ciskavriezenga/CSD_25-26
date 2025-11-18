@@ -7,8 +7,6 @@ Sine::Sine(float frequency, float samplerate) : frequency(frequency),
   std::cout << "Sine - constructor\n";
 }
 
-
-
 Sine::~Sine() {
   std::cout << "Sine - destructor\n";
 }
@@ -28,7 +26,6 @@ void Sine::tick() {
     phase -= 1.0f;
   }
   sample = sin(pi * 2 * phase) * amplitude;
-
 }
 
 //getters and setters

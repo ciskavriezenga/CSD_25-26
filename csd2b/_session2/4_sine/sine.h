@@ -8,7 +8,7 @@ class Sine
 {
 public:
   //Constructor and destructor
-  Sine(float frequency);
+  Sine(float freq);
   ~Sine();
 
   //return the current sample
