@@ -7,17 +7,14 @@ if(peerReviewScore <= 5) {
     redo = true;
 }
 ```
-Voorbeelden en referenties.
-<img src="./audio_diagram_standardized_elements.png">
-image from: https://econtact.ca/17_4/austin_synthesis.html
-
-
-
-
 
 **_Zie 1_leerdoelen_design.md_**
 
 = Final deliverable, _DEADLINE: Practicum 3_
+
+**!!!! Zie 2_audio_flow_and_pseudo_code.md"** met voorbeelden van zowel audio flow
+diagrammen als pseudo code. Let op: deze include afbeeldingen, dus even in
+markdown preview bekijken.
 
 <br></br>
 
