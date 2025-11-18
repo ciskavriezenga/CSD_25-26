@@ -10,6 +10,7 @@
 
   <img src="./2_Envelope_audio_diagram_example.png">
   In pseudo code:
+
   ```
   oscillatorSample = oscillator.getSample();
   // here envelope is viewed as a signal generator, hence the getSample instead of getValue
@@ -24,7 +25,6 @@
   In pseudo code:
 
   ```
-
   // here envelope is viewed as a signal generator, hence the getSample instead of getValue
   amplitude = envelope.getSample();
   oscillator.setAmplitude(amplitude);
