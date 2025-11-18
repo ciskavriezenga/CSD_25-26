@@ -175,3 +175,8 @@ cmake-build-debug
 
 # vscodium / vscode
 .vscode
+
+
+# obsidian
+*.obsidian/
+

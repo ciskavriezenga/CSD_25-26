@@ -18,12 +18,12 @@ EN twee van onderstaande (of één uit onderstaande én een goed geformuleerde e
 - De CSD’er kan wanneer zij/hen/hij vastloopt in het proces dit vastlopen herkennen en om hulp vragen.
 - De CSD’er kan het beoogde ontwerp afstellen op de eigen capaciteit, zowel wbt het afbakenen ter voorkoming van overbelasting als opschalen ter voorkoming van onderbelasting.
 
-</br>
+<br></br>
 
 Noteer je selectie en onderbouw je keuze in één alinea in een document genaamd "learningGoals", beschrijf hoe je denkt dit leerdoel te behalen (en reflecteren hierop?) en voeg deze toe aan je al bestaande repository in folder
 csd2b/synthSong/..
 
-</br>
+<br></br>
 
 
 ### 1.2 Design
