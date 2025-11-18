@@ -9,13 +9,6 @@
 - Voorbeeld van een oscillator en een envelope
 
   <img src="./2_Envelope_audio_diagram_example.png">
-
-
-  Dezelfde audio flow, andere ook veelvoorkomende stijl, met verder als verschil dat hier de amplitude als onderdeel van de oscillator gezien wordt:
-
-  <img src="./2_Envelope_audio_diagram_example_2.png">
-
-
   In pseudo code:
   ```
   oscillatorSample = oscillator.getSample();
@@ -23,6 +16,22 @@
   amplitude = envelope.getSample();
   output = oscillatorSample * amplitude;
   ```
+
+  Dezelfde audio flow, andere ook veelvoorkomende stijl, met verder als verschil dat hier de amplitude als onderdeel van de oscillator gezien wordt:
+
+  <img src="./2_Envelope_audio_diagram_example_2.png">
+
+  In pseudo code:
+
+  ```
+
+  // here envelope is viewed as a signal generator, hence the getSample instead of getValue
+  amplitude = envelope.getSample();
+  oscillator.setAmplitude(amplitude);
+  output = oscillator.getSample();
+  ```
+
+
 
 - Voorbeeld van FM synthese in de andere audio diagram stijl.
 
