@@ -12,6 +12,7 @@
 
 
   Dezelfde audio flow, andere ook veelvoorkomende stijl, met verder als verschil dat hier de amplitude als onderdeel van de oscillator gezien wordt:
+
   <img src="./2_Envelope_audio_diagram_example_2.png">
 
 
@@ -24,6 +25,7 @@
   ```
 
 - Voorbeeld van FM synthese in de andere audio diagram stijl.
+
   <img src="./2_FM_audio_diagram_example.png">
 
   In pseudo code is dit bijvoorbeeld wanneer je amplitude niet ziet als 'onderdeel van de oscillator':
