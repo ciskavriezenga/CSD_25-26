@@ -9,6 +9,7 @@
 - Voorbeeld van een oscillator en een envelope
 
   <img src="./2_Envelope_audio_diagram_example.png">
+
   In pseudo code:
 
   ```
