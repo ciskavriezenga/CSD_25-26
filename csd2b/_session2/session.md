@@ -8,8 +8,7 @@
 ## Content
 - ### Peer reviews
   _max 20 min. invullen, 5 min. resultaten op een rij + bespreken eventuele herziening._  
-  https://docs.google.com/forms/d/e/1FAIpQLSd9CHdy6EnJcD-wVP7idtdTsg5qWx4WwbbGLh5BohjyYsnANw/viewform?usp=dialog
-
+  - peer review loodjes trekken
 
 - ### Access specifiers
   _max 20 min. dan korte pauze_
