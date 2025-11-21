@@ -62,7 +62,7 @@
 
   // code per sample
   modulationSignal = modulator.getSample();
-  carrier.setFrequency(modulationSignal * carrierFreq);
+  carrier.setFrequency(modulationSignal + carrierFreq);
   output = carrier.getSample();
 
   ```
