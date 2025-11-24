@@ -8,5 +8,5 @@ public:
   ~Oscillator();
 
   void tick();
-  void calculate();
+  virtual void calculate() = 0;
 };
