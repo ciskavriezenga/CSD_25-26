@@ -17,19 +17,19 @@ void Callback::process(AudioBuffer buffer)  {
         numFrames] = buffer;
 
   for (int channel = 0; channel < numOutputChannels; ++channel) {
-    for (int sample = 0; sample < numFrames; ++sample) {
-      outputChannels[channel][sample] = square.getSample() * amplitude;
+    for (int frame = 0; frame < numFrames; ++frame) {
+      outputChannels[channel][frame] = square.getSample() * amplitude;
       square.tick();
 
       /* After every sample, check if we need to advance to the next note
 	     * This is a bit awkward in this scheme of buffers per channel
 	     *  In a multichannel setting we should update pitches independently per channel!
 	     */
-      if (frameIndex >= noteDelayFactor * sampleRate) {
-        frameIndex = 0;
+      if (frameCount >= noteDelayFactor * sampleRate) {
+        frameCount = 0;
         updatePitch (melody, square);
       } else {
-        frameIndex++;
+        frameCount++;
       }
     }
   }

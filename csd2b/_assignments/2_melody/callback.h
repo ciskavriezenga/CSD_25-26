@@ -19,7 +19,7 @@ private:
   Square square;
   double amplitude = 0.25;
   Melody melody;
-  int frameIndex = 0;
+  int frameCount = 0;
 
   /* instead of using bpm and specifying note lenghts we'll make every note
    * equal length and specify the delay between notes in terms of the samplerate

@@ -1,3 +1,3 @@
 #add_subdirectory(_session2)
 add_subdirectory(_session3)
-#add_subdirectory(_assignments)
+add_subdirectory(_assignments)
