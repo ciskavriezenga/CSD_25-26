@@ -8,14 +8,12 @@
 
 class CustomCallback : public AudioCallback {
 public:
-  CustomCallback (float sampleRate);
+  CustomCallback (float samplerate);
   void prepare (int rate) override;
   void process (AudioBuffer buffer) override;
 
 private:
-  float samplerate = 44100;
-  Square oscillator { 220, samplerate };
-  //    Sine oscillator {440, samplerate};
+  Square oscillator;
 };
 
 #endif  //CALLBACK_H

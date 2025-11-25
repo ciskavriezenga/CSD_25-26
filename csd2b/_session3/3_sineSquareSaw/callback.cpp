@@ -1,12 +1,15 @@
 #include "callback.h"
 
-CustomCallback::CustomCallback (float sampleRate)
-  : AudioCallback (sampleRate), samplerate (sampleRate) {
-  std::cout << "Hallo Ciska" << std::endl;
+CustomCallback::CustomCallback (float samplerate)
+  : AudioCallback (samplerate),
+    oscillator(220, samplerate),
+    oscillatorFifth(220 * (3/2), samplerate),
+    oscillatorFifthDetuned(220 * (3.01/2), samplerate)
+{
+
 }
 
-void CustomCallback::prepare (int rate) {
-  samplerate = (float) rate;
+void CustomCallback::prepare (int samplerate) {
   oscillator.setSamplerate (samplerate);
   std::cout << "\nsamplerate: " << samplerate << "\n";
 }
@@ -19,10 +22,16 @@ void CustomCallback::process (AudioBuffer buffer) {
         numFrames] = buffer;
 
   for (int channel = 0u; channel < numOutputChannels; ++channel) {
-    for (int sample = 0u; sample < numFrames; ++sample) {
-      outputChannels[channel][sample] = 0.0f;
-      outputChannels[channel][sample] = oscillator.getSample();
+    for (int frame = 0u; frame < numFrames; ++frame) {
+      outputChannels[channel][frame] = 0.0f;
+      float sample = oscillator.getSample() + oscillatorFifth.getSample() + oscillatorFifthDetuned.getSample();
+      sample *= 0.3f;
+      outputChannels[channel][frame] = sample;
+
+
       oscillator.tick();
+      oscillatorFifth.tick();
+      oscillatorFifthDetuned.tick();
     }
   }
 }
