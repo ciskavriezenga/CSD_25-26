@@ -1,11 +1,9 @@
 #include "callback.h"
 
-Callback::Callback(float sampleRate) : AudioCallback(sampleRate), sampleRate(sampleRate) {
-  std::cout << "art-farts.com" << std::endl;
-}
+Callback::Callback(float samplerate) : AudioCallback(samplerate), samplerate(samplerate) {}
 
-void Callback::prepare (int sampleRate)  {
-  this->sampleRate = sampleRate;
+void Callback::prepare (int samplerate)  {
+  this->samplerate = samplerate;
   updatePitch(melody, square);
 }
 
@@ -25,7 +23,7 @@ void Callback::process(AudioBuffer buffer)  {
 	     * This is a bit awkward in this scheme of buffers per channel
 	     *  In a multichannel setting we should update pitches independently per channel!
 	     */
-      if (frameCount >= noteDelayFactor * sampleRate) {
+      if (frameCount >= noteDelayFactor * samplerate) {
         frameCount = 0;
         updatePitch (melody, square);
       } else {
@@ -36,7 +34,7 @@ void Callback::process(AudioBuffer buffer)  {
 }
 
 
-// NOTE - refactor --> Synth
+// NOTE - this function should be part of the Synth or utility class
 double Callback::mtof (float mPitch){
   return 440.0 * pow (2.0, (mPitch - 69.0f) / 12.0f);
 }

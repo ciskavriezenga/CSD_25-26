@@ -7,7 +7,7 @@
 
 class Callback : public AudioCallback {
 public:
-  explicit Callback (float samplerate);
+  explicit Callback (float sampleRate);
   void prepare (int rate) override;
   void process (AudioBuffer buffer) override;
 
@@ -19,7 +19,7 @@ private:
   Square square;
   double amplitude = 0.25;
   Melody melody;
-  int frameCount = 0;
+  int frameCounts = 0;
 
   /* instead of using bpm and specifying note lenghts we'll make every note
    * equal length and specify the delay between notes in terms of the samplerate

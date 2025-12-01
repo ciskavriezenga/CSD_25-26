@@ -1,11 +1,5 @@
 # Session 3 - assignments
 
-
-• Oscillator base class, derived Sine and Sauare classes
-• Simple Synth in C++
-• Note array
-
-
 ## 1. Deliverable - Class diagram eindopdracht
 _deadline: session 4_
 
