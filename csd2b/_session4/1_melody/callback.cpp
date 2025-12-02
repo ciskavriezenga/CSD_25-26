@@ -20,8 +20,8 @@ void Callback::process(AudioBuffer buffer)  {
         numFrames] = buffer;
 
   for (int channel = 0; channel < numOutputChannels; ++channel) {
-    for (int sample = 0; sample < numFrames; ++sample) {
-      outputChannels[channel][sample] = square.getSample() * amplitude;
+    for (int frame = 0; frame < numFrames; ++frame) {
+      outputChannels[channel][frame] = square.getSample() * amplitude;
       square.tick();
 
       // melody.tick returns true when a new note is reached

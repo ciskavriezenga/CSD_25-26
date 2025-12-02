@@ -20,9 +20,9 @@ Note Melody::getCurrentNote()
 
 bool Melody::tick()
 {
-  frameIndex++;
+  frameCount++;
 
-  if (frameIndex >= currentNoteFrameDuration)
+  if (frameCount >= currentNoteFrameDuration)
   {
     // fetch a new note
     noteIndex++;
@@ -33,8 +33,8 @@ bool Melody::tick()
     // cache the frame duration of the new current note
     updateCurrentNoteFrameDur();
 
-    // reset the frameIndex
-    frameIndex = 0;
+    // reset the frameCount
+    frameCount = 0;
     return true;
   }
   return false;

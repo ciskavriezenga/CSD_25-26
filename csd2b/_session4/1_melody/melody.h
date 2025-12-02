@@ -39,7 +39,7 @@ private:
   float quarterNoteFrameDur;
   // the index of the current note - readIndex
   int noteIndex = 0;
-  int frameIndex = 0;
+  int frameCount = 0;
 };
 
 

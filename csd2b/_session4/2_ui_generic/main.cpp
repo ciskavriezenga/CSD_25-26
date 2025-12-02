@@ -13,17 +13,17 @@
 
 std::string retrieveUserInput(std::string selectionOptions[], int numOptions)
 {
- // show user the allowed options
- std::cout << "Please enter your selection. You can choose from: ";
- for(int i = 0; i < numOptions - 1; i++) {
-   std::cout << selectionOptions[i] << ", ";
- }
- // print last option outside forloop to end with an .
- std::cout << selectionOptions[numOptions - 1] << "." << std::endl;
- // retrieve and return choice
- std::string selection = "";
- std::cin >> selection;
- return selection;
+  // show user the allowed options
+   std::cout << "\nPlease enter your selection. You can choose from: ";
+   for(int i = 0; i < numOptions - 1; i++) {
+     std::cout << selectionOptions[i] << ", ";
+   }
+  // print last option outside forloop to end with an .
+  std::cout << selectionOptions[numOptions - 1] << "." << std::endl;
+  // retrieve and return choice
+  std::string selection = "";
+  std::getline(std::cin, selection);
+  return selection;
 }
 
 int retrieveUserSelection(std::string selectionOptions[], int numOptions)
@@ -80,17 +80,18 @@ float retrieveValueInRange(float min, float max)
 } // retrieveValueInRange()
 
 
-
 int main()
 {
- std::string waveFormOptions[4] = {"sine", "saw", "square", "triangle"};
- int numWaveFormOptions = 4;
+  // NOTE: when you use a variable to set the length of an array, this has to be a constant
+  // since a static array may not be initialized with a variable length
+  const int numWaveFormOptions = 4;
+  std::string waveFormOptions[numWaveFormOptions] = {"sine", "saw", "square", "triangle"};
 
- int waveTypeSelection = retrieveUserSelection(waveFormOptions,numWaveFormOptions);
+  int waveTypeSelection = retrieveUserSelection(waveFormOptions, numWaveFormOptions);
 
- // use the selected option to show the corresponding text
- std::cout << "You selected: " << waveFormOptions[waveTypeSelection] << std::endl;
+  // use the selected option to show the corresponding text
+  std::cout << "You selected: " << waveFormOptions[waveTypeSelection] << std::endl;
 
- float value =  retrieveValueInRange(20, 20499);
- std::cout << "You chose the following value: " << value << std::endl;
+  float value =  retrieveValueInRange(20, 20499);
+  std::cout << "You chose the following value: " << value << std::endl;
 }

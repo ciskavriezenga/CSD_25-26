@@ -1,6 +1,4 @@
 #include <iostream>
-// written by: Ciska Vriezenga
-
 
 int add(int x, int y) {
   return x + y;
@@ -18,6 +16,9 @@ void addByReference(int& x, int y) {
 int main() {
   int a = 8;
   int b = 10;
+
+  std::cout << "/n size of an int: " << sizeof(int) << std::endl;
+  std::cout << "/n size of an address: " << sizeof(&b) << std::endl;
 
   // -------- add function with a return --------
   std::cout << "\nadd: " << add(a, b);
@@ -40,4 +41,5 @@ int main() {
   std::cout << "\naddByReference: " << d;
 
   std::cout << "\n";
+
 }

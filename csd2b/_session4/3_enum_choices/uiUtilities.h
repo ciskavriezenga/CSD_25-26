@@ -16,7 +16,7 @@ public:
   // returns the users input value, which has to be in the range of [min, max]
   static float retrieveValueInRange(float min, float max);
 
-protected:
+private:
   // hide default constructor and destructor
   // no need to instantiate object of class UIUtilities
   UIUtilities() {};

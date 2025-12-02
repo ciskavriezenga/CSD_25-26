@@ -13,7 +13,7 @@ public:
 
   // NOTE: needs to be same order as the waveFormOptions string array
   enum Waveform {
-    Sine = 0, // ensure enum starts at 0
+    Sine = 0, // ensure enum starts at 0 (automatically starts at 0, for the sake of the example)
     Saw,
     Square,
     Size // 3
@@ -27,3 +27,4 @@ public:
 protected:
 
 };
+
