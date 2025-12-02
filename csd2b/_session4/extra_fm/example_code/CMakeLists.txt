@@ -1,10 +1,10 @@
-get_filename_component(ProjectId ${CMAKE_CURRENT_LIST_DIR} NAME)
+get_filename_component(ProjectId .. NAME)
 string(REPLACE " " "_" ProjectId ${ProjectId})
 project(${ProjectId} VERSION 0.0.1)
 
 juce_add_console_app(${PROJECT_NAME} PRODUCT_NAME "example")
 target_sources(${PROJECT_NAME} PRIVATE main.cpp audioToFile.cpp oscillator.cpp sine.cpp square.cpp note.cpp melody.cpp callback.cpp)
-target_compile_definitions(${PROJECT_NAME} PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_definitions(${PROJECT_NAME} PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 SOURCE_DIR="..")
 
 target_link_libraries(${PROJECT_NAME}
         PRIVATE

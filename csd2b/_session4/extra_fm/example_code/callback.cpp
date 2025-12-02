@@ -22,6 +22,7 @@ void CustomCallback::process (AudioBuffer buffer) {
   for (int channel = 0u; channel < numOutputChannels; ++channel) {
     for (int frame = 0u; frame < numFrames; ++frame) {
 
+      // NOTE - NOT YET DONE - NOT WORKING PROPERLY,  WORK IN PROGRESS
       float modSignal = modulator.getSample();
       float modulatedFreq = carrierFrequency * (modSignal * modulationIndex);
       modulatedFreq += carrierFrequency;
