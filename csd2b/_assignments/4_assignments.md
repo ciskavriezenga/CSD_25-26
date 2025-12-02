@@ -1,7 +1,5 @@
 # Session 4 - assignments
 
-## NOTE: Additional fm example 
-**See _session4/extra_fm_example/ for fm example with mod index instead of modulation depth and _session4/extra_fm_example/FM_synth_other_strategy.png**
 
 ### 1. Deliverable final option - Class diagram eindopdracht
 **_Final deadline: practicum session 5_**
