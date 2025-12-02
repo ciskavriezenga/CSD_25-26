@@ -3,5 +3,5 @@ add_subdirectory(2_ui_generic)
 add_subdirectory(3_enum_choices)
 add_subdirectory(4_pointers_intro)
 add_subdirectory(5_polymorphism)
-add_subdirectory(extra_fm_code_example)
+add_subdirectory(extra_fm_code)
 
