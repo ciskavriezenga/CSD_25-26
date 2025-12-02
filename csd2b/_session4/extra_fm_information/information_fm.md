@@ -70,3 +70,6 @@ Given the alteration of carrier frequency and a constant (adaptable as paramter 
 modulation_frequency =  ratio_inverse * carrier_frequency
 modulation_deviation = modulation_index * modulation_frequency
 ```
+
+### Audio flow diagram
+![fm_flow_diagram_ratio.png](fm_flow_diagram_ratio.png)
