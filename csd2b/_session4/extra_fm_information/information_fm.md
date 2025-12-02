@@ -72,4 +72,4 @@ modulation_deviation = modulation_index * modulation_frequency
 ```
 
 ### Audio flow diagram
-![fm_flow_diagram_ratio.png](fm_flow_diagram_ratio.png)
+![fm_flow_diagram.png](fm_flow_diagram.png)
