@@ -10,7 +10,7 @@ Deviation = the amplitude of the modulating signal, controls the modulation widt
 ![fm_sidebands.png](fm_sidebands.png)
 (Boulanger, 2000, p.200 )
 
-"The ratio of the carrier frequency to the modulator frequency, commonly called the c/m ratio determines the relative frequencies of the partials in the FM spectrum. When c/m reduces to a simple rational number such as 1/2 or 3/4 the output spectrum is harmonic. When c/m reduces to an irrational number such as 1/ 2 or 2/ 13 partials are in a noninteger relationship and so the spectrum is inharmonic (in practice, complex ratios such as 411/377 or 1/1.617 will create spectra that will sound inharmonic. True irrational numbers can only be approximated digitally anyway)."
+"The ratio of the carrier frequency to the modulator frequency, commonly called the c/m ratio determines the relative frequencies of the partials in the FM spectrum. When c/m reduces to a simple rational number such as 1/2 or 3/4 the output spectrum is harmonic. When c/m reduces to an irrational number such as 1/sqrt(2)or 2/sqrt(13) partials are in a noninteger relationship and so the spectrum is inharmonic (in practice, complex ratios such as 411/377 or 1/1.617 will create spectra that will sound inharmonic. True irrational numbers can only be approximated digitally anyway)."
 (Boulanger, 2000, p.200 )
 
 Thus  c/m ratio 1/2 or e.g. 3/4 is harmonic. 
