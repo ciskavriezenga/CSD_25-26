@@ -28,15 +28,3 @@
 * ### Polymorphism
   * <u>**example: 5_polymorphism**</u>
   * <u>**example: 6_dynamic_allocation**</u>
-
-Voor wie nog niet lokaal de csd repo heeft: 
-```bash 
-git clone git@github.com:ciskavriezenga/CSD_25-26.git
-cd CSD_25-26
-git submodule update --init 
-```
-Met bovenstaande 'installeer' je repo lokaal, inclusief de submodule JUCE. 
-Wanneer er nieuwe code online staat, hoef je enkel vanuit dat mapje in de terminal: 
-```bash 
-git pull origin main
-```

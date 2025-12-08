@@ -1,4 +1,5 @@
 #include <iostream>
+#include "recap.h"
 
 #define SCOPE "city"
 #define HELLO_WORLD "hello world"
@@ -9,6 +10,7 @@
 
 #define PREPROCESSOR_SETTINGS_EXAMPLE 1
 
+#define SHOW_RECAP_EXAMPLE 1
 
 int main()
 {
@@ -39,6 +41,32 @@ int main()
 #if DEBUG
     std::cout << "Running debug mode, you can 'outcomment' couts by using a macro in this manner." << std::endl;
 #endif
+
+#endif
+
+#if SHOW_RECAP_EXAMPLE
+    std::cout << "\nPrinting Recap object count before instantiation of Recap object.\n";
+
+    Recap::printObjectCount();
+    std::cout << std::endl;
+    // instantiate Recap object
+    Recap recapObject;
+    std::cout << "\nPrinting Recap object count after 1x instantiation of Recap object.\n";
+    Recap::printObjectCount();
+    std::cout << std::endl;
+    {
+        // instantiate 2 additional Recap objects
+        Recap recapObject2;
+        Recap recapObject3;
+        std::cout << "\nPrinting Recap object count after additional 2x instantiation of Recap object.\n";
+        Recap::printObjectCount();
+    }
+
+    std::cout << "\nPrinting Recap object after 2 Recap objects went out of scope.\n";
+    Recap::printObjectCount();
+
+    std::cout << "\nNote: we can also call the static method on the object.\n";
+    recapObject.printObjectCount();
 
 #endif
 

@@ -5,10 +5,11 @@
  * Simple example of the need for virtual methods
  * We allocate a sine and square object dynamically
  */
+#define SELECTED_EXAMPLE 3
 
 int main()
 {
-#if 0 // build example 1
+#if SELECTED_EXAMPLE == 1 // build example 1
 
   /*
    * Create the sine and saw objects dynamically with the keyword 'new'
@@ -50,7 +51,7 @@ int main()
   saw = nullptr;
 
 
-#else //build example
+#elif SELECTED_EXAMPLE == 2 //build example 2
   Oscillator* osc = new Sine();
   osc->calculate();
    /*
@@ -61,5 +62,25 @@ int main()
 
    delete osc;
    osc = nullptr;
+#elif SELECTED_EXAMPLE == 3 // build example 3
+    /* Text snippet and code below is based on examples from https://cppscripts.com/cpp-null-vs-nullptr
+     *      "Introduced in C++11, `nullptr` is a keyword that represents a null pointer,
+     *      providing a more clear and type-safe alternative compared to 0 or `NULL`."
+     */
+
+    int* ptr1 = NULL;  // NULL representation
+    int* ptr2 = nullptr;  // nullptr representation
+    int* ptr3 = 0;  // classic method of creating a null ptr
+
+    std::cout << "ptr1 is " << (ptr1 == nullptr ? "null" : "not null") << std::endl;
+    std::cout << "ptr2 is " << (ptr2 == nullptr ? "null" : "not null") << std::endl;
+    std::cout << "ptr3 is " << (ptr3 == nullptr ? "null" : "not null") << std::endl;
+
+    std::cout << "NULL macro contains: " << NULL << std::endl;
+
+
+
+
+
 #endif
 }

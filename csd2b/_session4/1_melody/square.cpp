@@ -1,21 +1,11 @@
 #include "square.h"
 #include "math.h"
 
-
-Square::Square() : frequency(220.0),
-  amplitude(1.0), phase(0), sample(0), samplerate(44100.0)
-{
-  std::cout << "Square - constructor\n";
-}
-
-
 Square::Square(double frequency, double samplerate) : frequency(frequency),
   amplitude(1.0), phase(0), sample(0), samplerate(samplerate)
 {
   std::cout << "Square - constructor\n";
 }
-
-
 
 Square::~Square() {
   std::cout << "Square - destructor\n";

@@ -6,8 +6,7 @@ class Square
 {
 public:
   //Constructor and destructor
-  Square();
-  Square(double frequency, double samplerate);
+  Square(double frequency = 220.0f, double samplerate = 44100.0f);
   ~Square();
   void prepare(int samplerate);
   //return the current sample

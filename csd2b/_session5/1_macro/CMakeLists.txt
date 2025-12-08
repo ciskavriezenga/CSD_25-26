@@ -3,7 +3,7 @@ string(REPLACE " " "_" ProjectId ${ProjectId})
 project(${ProjectId} VERSION 0.0.1)
 
 add_executable(${ProjectId})
-target_sources(${ProjectId} PRIVATE main.cpp)
+target_sources(${ProjectId} PRIVATE main.cpp recap.cpp)
 target_compile_definitions(${ProjectId} PRIVATE SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 
 
