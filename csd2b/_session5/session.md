@@ -14,11 +14,14 @@
 * ### FM recap
   <u>Example: ../_session4/extra_fm *</u>
 
-* ### Dynamische allocatie met pointers 
-  <u>Example: 1_polymorphism_dynamicAllocation</u>
 
-* ### Macro 
-  <u>Example: 2_macro</u>
+* ### Macro
+  <u>Example: 1_macro</u>
+
+
+* ### Dynamische allocatie met pointers 
+  <u>Example: 2_polymorphism_dynamicAllocation</u>
+
 
 * ### Eindopdracht verwachtingen presentatie
   Uit <u>Eindopdracht_SynthSong.pdf</u>
