@@ -10,7 +10,7 @@
 
 #define PREPROCESSOR_SETTINGS_EXAMPLE 1
 
-#define SHOW_RECAP_EXAMPLE 1
+#define SHOW_RECAP_EXAMPLE 0
 
 int main()
 {

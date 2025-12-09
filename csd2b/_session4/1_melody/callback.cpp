@@ -1,6 +1,6 @@
 #include "callback.h"
 
-Callback::Callback(float samplerate) : AudioCallback(samplerate), samplerate(samplerate) {}
+Callback::Callback(float samplerate) : AudioCallback(samplerate) {}
 
 void Callback::prepare (int samplerate)  {
   this->samplerate = samplerate;
