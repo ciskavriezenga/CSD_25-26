@@ -71,3 +71,11 @@ void Square::tick() {
     sample = -1;
   }
 }
+
+bool boolswitcher(bool recordSwitch){
+    if(recordSwitch){
+        return false;
+    }else{
+        return true;
+    }
+}
