@@ -8,7 +8,8 @@
 class CustomCallback : public AudioCallback {
 public:
   CustomCallback (float samplerate);
-  void prepare (int rate) override;
+  //
+  void prepare (int sampleRate) override;
   void process (AudioBuffer buffer) override;
 
 private:

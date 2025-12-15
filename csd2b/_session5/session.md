@@ -35,7 +35,8 @@
   Met tijdindicatie en voorzien van verder uitleg, een presentatie met: 
   * 2 à 3 minuten demo waarin je het afhandelen van zowel juiste als verkeerde input toont en instelbare parameters demonstreert.    
   * 2 à 3 minuten inzicht in aanpak, opzet, focus, strategie ("Chosen focus and the custom design")
-  * 3 minuten 'samengevatte' reflectie ("Reflection and take-aways")op de gekozen leerdoelen én op: 
+  * 3 minuten 'samengevatte' reflectie ("Reflection and take-aways")op: 
+    * de gekozen leerdoelen 
     * Wat ging goed / wat ging er minder goed op gebied van proces en aanpak? 
     * Wat heb je geleerd los van de inhoudelijke doelen (OOP en Cpp)
     * --> Welke take-aways abstraheer je uit je gehele reflectie en neem je mee naar het volgende blok?

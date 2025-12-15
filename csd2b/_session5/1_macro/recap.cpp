@@ -5,6 +5,7 @@ int Recap::objectCount = 0;
 Recap::Recap()
 {
     std::cout << "Recap constructor\n";
+    std::cout << "SCOPE is " << SCOPE << std::endl;
     objectCount++;
 }
 

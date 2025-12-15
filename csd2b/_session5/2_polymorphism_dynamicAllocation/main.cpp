@@ -5,7 +5,7 @@
  * Simple example of the need for virtual methods
  * We allocate a sine and square object dynamically
  */
-#define SELECTED_EXAMPLE 3
+#define SELECTED_EXAMPLE 2
 
 int main()
 {
@@ -17,6 +17,7 @@ int main()
    * a 'class pointer', e.g. a Sine pointer or a Saw pointer
    * a pointer type is indicated with a *, which is simply a convention.
    */
+
   Sine* sine = new Sine();
   Saw* saw = new Saw();
 
@@ -47,8 +48,10 @@ int main()
   // delete dynamically allocated objects
   delete sine;
   sine = nullptr;
+  sineOscillator = nullptr;
   delete saw;
   saw = nullptr;
+  sawOscillator = nullptr;
 
 
 #elif SELECTED_EXAMPLE == 2 //build example 2

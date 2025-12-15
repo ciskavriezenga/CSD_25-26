@@ -1,16 +1,16 @@
 #include <iostream>
 #include "recap.h"
 
-#define SCOPE "city"
+#define SCOPE "foo"
 #define HELLO_WORLD "hello world"
 #define PRINT_HELLO_UNIVERSE std::cout << "hello universe" << std::endl
 
-#define FIRST_PART_EXAMPLE false
+#define FIRST_PART_EXAMPLE true
 #define DEBUG 0
 
-#define PREPROCESSOR_SETTINGS_EXAMPLE 1
+#define PREPROCESSOR_SETTINGS_EXAMPLE 0
 
-#define SHOW_RECAP_EXAMPLE 0
+#define SHOW_RECAP_EXAMPLE 1
 
 int main()
 {
@@ -69,7 +69,4 @@ int main()
     recapObject.printObjectCount();
 
 #endif
-
-
-
 }
