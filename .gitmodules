@@ -1,3 +1,9 @@
 [submodule "JUCE"]
 	path = JUCE
 	url = https://github.com/juce-framework/JUCE.git
+[submodule "csd2c/PP_C_Focus/JUCE"]
+	path = csd2c/PP_C_Focus/JUCE
+	url = https://github.com/juce-framework/JUCE.git
+[submodule "csd2c/Plugin_Focus/JUCE"]
+	path = csd2c/Plugin_Focus/JUCE
+	url = https://github.com/juce-framework/JUCE.git
