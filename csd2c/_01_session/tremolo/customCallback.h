@@ -7,7 +7,7 @@
 
 #include "audiocomponent.h"
 #include "sine.h"
-
+#include "settings.h"
 #include <iostream>
 #include <random>
 
