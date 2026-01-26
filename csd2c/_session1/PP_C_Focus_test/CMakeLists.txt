@@ -1,0 +1,22 @@
+get_filename_component(ProjectId ${CMAKE_CURRENT_LIST_DIR} NAME)
+string(REPLACE " " "_" ProjectId ${ProjectId})
+project(${ProjectId} VERSION 0.0.1)
+
+juce_add_console_app(${ProjectId} PRODUCT_NAME "PP Focus")
+target_sources(${ProjectId} PRIVATE main.cpp writeToFile.cpp)
+target_compile_definitions(${ProjectId} PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
+
+target_link_libraries(${ProjectId}
+    PRIVATE
+    juce::juce_audio_basics
+    juce::juce_audio_devices
+    juce::juce_audio_formats
+    juce::juce_audio_processors
+
+    PUBLIC
+    juce::juce_recommended_config_flags
+    #juce::juce_recommended_warning_flags
+)
+
+target_compile_features(${ProjectId} PRIVATE cxx_std_20)
+
