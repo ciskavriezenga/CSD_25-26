@@ -1,2 +1,2 @@
 add_subdirectory(_01_session)
-add_subdirectory(lib)
+add_subdirectory(csd_lib)
