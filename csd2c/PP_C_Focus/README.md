@@ -18,4 +18,12 @@ For MacOS run the following in your terminal: \
 For Linux run the following in your terminal: \
 ```sudo apt install liblo-dev```
 ```sudo pacman -S liblo```
-For Windows 
+For Windows:
+Install vcpkg 
+```git clone https://github.com/microsoft/vcpkg
+cd vcpkg 
+./bootstrap-vcpkg.bat
+```
+then run 
+```./vcpkg.exe install liblo```
+
