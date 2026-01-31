@@ -19,7 +19,7 @@ target_link_libraries(${libName}
     PRIVATE
     oscillators  
     liblo::liblo 
-    liblo::liblo_static
+    #liblo::liblo_static
     ws2_32
     iphlpapi
     PUBLIC 

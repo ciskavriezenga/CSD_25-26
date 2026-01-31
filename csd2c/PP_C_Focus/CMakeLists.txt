@@ -27,7 +27,7 @@ target_link_libraries(PP_C_Focus PRIVATE
         oscillators
         
         liblo::liblo 
-        liblo::liblo-static
+        #liblo::liblo-static
 
         juce::juce_audio_basics
         juce::juce_audio_devices

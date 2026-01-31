@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
+#include <string>
 
+#define uint unsigned int
 
 // static utility class with debug functionality for buffers
 class BufferDebugger
