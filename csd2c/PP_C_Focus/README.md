@@ -12,19 +12,27 @@ to change a parameter in the audio callback which acts as server (receiver). \
 ### JUCE 
 You should already have this. 
 
-### Lo 
+### lo 
 For MacOS run the following in your terminal: \
 ```brew install liblo```
 For Linux run the following in your terminal: \
 ```sudo apt install liblo-dev```
 ```sudo pacman -S liblo```
 For Windows:
-Install vcpkg 
+1. Install vcpkg 
 ```git clone https://github.com/microsoft/vcpkg
 cd vcpkg 
 ./bootstrap-vcpkg.bat
 ```
 you may need to add the `vcpkg.exe` to your PATH. 
-then run 
+2. then install liblo 
 ```vcpkg install liblo```
+3. then generate build files using 
+```cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=C:\path\to\vscpk\scripts\buildsystems\vcpkg.cmake```
+If this fails, delete your build folder and try again. 
 
+### python-osc 
+pip3 install python-osc
+
+
+## Good luck 
