@@ -33,6 +33,12 @@
 
 OSC::OSC() {}
 
+OSC::~OSC() {
+#ifdef _WIN32
+  WSACleanup();
+#endif
+}
+
 /* _wrap_callback() is called by the OSC library and in turn calls the
  *    real callback of the object pointed to by user_data (!)
  *
@@ -55,6 +61,13 @@ static void errorhandler(int num, const char *msg, const char *where) {
  * start a new server in its own thread, waiting for data on the specified port
  */
 void OSC::init(string serverport) {
+#ifdef _WIN32
+  WSADATA wsaData;
+  if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+    cout << "WSAStartup failed" << endl;
+    exit(1);
+  }
+#endif
   server = lo_server_thread_new(serverport.c_str(), errorhandler);
 }
 

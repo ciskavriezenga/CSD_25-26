@@ -24,6 +24,7 @@ Install vcpkg
 cd vcpkg 
 ./bootstrap-vcpkg.bat
 ```
+you may need to add the `vcpkg.exe` to your PATH. 
 then run 
-```./vcpkg.exe install liblo```
+```vcpkg install liblo```
 

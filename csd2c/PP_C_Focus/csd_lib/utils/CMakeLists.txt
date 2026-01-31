@@ -20,6 +20,8 @@ target_link_libraries(${libName}
     oscillators  
     liblo::liblo 
     liblo::liblo_static
+    ws2_32
+    iphlpapi
     PUBLIC 
     audio_header 
     juce::juce_audio_basics 

@@ -32,7 +32,13 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
-#include <unistd.h>
+
+#ifdef _WIN32
+  #include <winsock2.h>
+  #include <windows.h>
+#else
+  #include <unistd.h>
+#endif
 
 #include <lo/lo.h>
 
@@ -45,6 +51,7 @@ using namespace std;
 class OSC {
 public:
   OSC();
+  ~OSC();
   void init(string serverport);
   void set_callback(const char *path, const char *types);
   void start();
