@@ -3,7 +3,6 @@ project(PP_C_Focus VERSION 0.0.1)
 
 add_subdirectory(JUCE)
 
-
 if(MSVC)
     find_package(liblo CONFIG REQUIRED)
 else()

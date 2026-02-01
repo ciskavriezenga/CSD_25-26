@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 project(PluginFocus VERSION 0.0.1)
 
 add_subdirectory(JUCE)
+add_subdirectory(csd_lib)
 
 juce_add_plugin(PluginFocus
         VERSION 0.0.1
@@ -36,6 +37,11 @@ target_compile_definitions(PluginFocus
 
 target_link_libraries(PluginFocus
         PRIVATE
+        audio
+        utils
+        effects
+        oscillators
+
         juce::juce_audio_utils
         juce::juce_product_unlocking
         juce::juce_data_structures
@@ -47,6 +53,10 @@ target_link_libraries(PluginFocus
 #        juce::juce_recommended_warning_flags
 )
 
+
+if(MSVC)
+    add_definitions(-DNOMINMAX)
+endif()
 
 target_compile_features(PluginFocus PRIVATE cxx_std_20)
 
