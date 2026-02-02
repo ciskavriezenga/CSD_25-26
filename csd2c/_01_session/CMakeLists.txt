@@ -1,3 +1,3 @@
-#add_subdirectory(1_tremolo)
-#add_subdirectory(2_applyEffectExample)
-add_subdirectory(3_applyEffectExample_csdlib)
+add_subdirectory(1a_tremolo_in_callback)
+add_subdirectory(1b_tremolo_in_class)
+add_subdirectory(2_applyEffectExample_csdlib)

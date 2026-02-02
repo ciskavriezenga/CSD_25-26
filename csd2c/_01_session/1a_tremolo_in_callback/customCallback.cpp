@@ -8,7 +8,7 @@
 void CustomCallback::prepare(int sampleRate)
 {
     sine.prepare(sampleRate);
-    sine.setFrequency(2.0f);
+    sine.setFrequency(6.0f);
 }
 
 
@@ -30,7 +30,7 @@ void CustomCallback::process (AudioBuffer buffer) {
             // map output sine to the required range: [-1, 1] --> [0,1]
             float modSignal = (sine.getSample() + 1.0f) * 0.5f;
 
-            static float modDepth = 0.25f;
+            static float modDepth = 0.85f;
             modSignal *= modDepth;
             float modulatedSample = inputChannels[channel][sample] * modSignal;
 

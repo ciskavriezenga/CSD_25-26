@@ -10,7 +10,7 @@ WaveShaper::WaveShaper(float dryWet) : Effect(dryWet) {
 WaveShaper::~WaveShaper() {}
 
 
-float WaveShaper::applyEffect(const float input)
+void WaveShaper::applyEffect(const float &input, float &output)
 {
   float sample = input;
   if(sample > 1.0f)  sample = 1.0f;
@@ -19,11 +19,11 @@ float WaveShaper::applyEffect(const float input)
   float indexFloat = WavetableGenerator::map(sample, -1.0f, 1.0f, 0.0f, (float) (BUFFER_SIZE - 1));
   int index = (int) indexFloat;
   // TODO - interpolate
-  return buffer[index];
+  output = buffer[index];
 #else
   static float k = 100.0f;
   static float normalizeFactor = 1.0f / atan(k);
-  return normalizeFactor * atan(k * input);
+  output = normalizeFactor * atan(k * input);
 #endif
 
 }

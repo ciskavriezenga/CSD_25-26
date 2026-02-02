@@ -30,7 +30,6 @@ private:
     std::random_device randomDevice;
     std::mt19937 generator{randomDevice()};
     std::uniform_real_distribution<> distribution{-1.0, 1.0};
-    Sine sine;
     WaveShaper waveShaper;
 };
 
