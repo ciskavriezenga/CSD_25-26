@@ -21,6 +21,7 @@ target_include_directories(PP_C_Focus PRIVATE ${LIBLO_INCLUDE_DIR})
 
 if(MSVC)  
 target_link_libraries(PP_C_Focus PRIVATE
+        csd_lib
         liblo::liblo
         #liblo::liblo-static
 
@@ -30,18 +31,13 @@ target_link_libraries(PP_C_Focus PRIVATE
         juce::juce_audio_processors
 
         PUBLIC
-        csd_lib
-
         juce::juce_recommended_config_flags
-        #        juce::juce_recommended_warning_flags
+        #juce::juce_recommended_warning_flags
 )
 else()
-target_link_libraries(PP_C_Focus PRIVATE
-        audio
-        utils
-        effects
-        oscillators
-        
+    target_link_libraries(PP_C_Focus PRIVATE
+        csd_lib
+
         PkgConfig::LIBLO 
 
         juce::juce_audio_basics
@@ -51,7 +47,7 @@ target_link_libraries(PP_C_Focus PRIVATE
 
         PUBLIC
         juce::juce_recommended_config_flags
-        #        juce::juce_recommended_warning_flags
+        #juce::juce_recommended_warning_flags
 )
 endif()
 target_compile_features(PP_C_Focus PRIVATE cxx_std_20)
