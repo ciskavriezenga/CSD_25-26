@@ -13,7 +13,6 @@ target_include_directories(csd_lib
         ${LIBLO_INCLUDE_DIRS}
 )
 
-
 if(MSVC)
     find_package(liblo CONFIG REQUIRED)
 else()
