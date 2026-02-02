@@ -18,10 +18,6 @@ markdown preview bekijken.
 
 <br></br>
 
-
-## 2. Classes, inheritance & oefenen met C++
-
-2.1 **[READ][DIGEST] Destructor, delegating constructor en initializer list**  
 - **Constructor delegation**
   - Lees over **constructor delegation** https://www.tutorialspoint.com/cplusplus/cpp_delegating_constructors.htm
   - Voer het voorbeeld _1_oscillator_final_ uit en bekijk de flow, welke constructor wordt het eerst aangeroepen?
@@ -30,6 +26,10 @@ markdown preview bekijken.
   - Waarom zou je een initializer list gebruiken in plaats van de body van de constructor?
   - Kun je een reden bedenken om ipv een initializer list voor zowel freq en amp een losse setter functie in de
   constructor body aan te roepen?
+## 2. Classes, inheritance & oefenen met C++
+
+2.1 **[READ][DIGEST] Destructor, delegating constructor en initializer list**
+
 - **Destructors**
   - Lees over **destructors** https://www.tutorialspoint.com/cplusplus/cpp_destructors.htm
   - Wanneer zou een destructor in MT context nodig zijn?

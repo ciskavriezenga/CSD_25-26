@@ -1,21 +1,59 @@
 cmake_minimum_required(VERSION 3.20)
-project(PP_Focus VERSION 1.0)
+project(PP_C_Focus VERSION 0.0.1)
+
 add_subdirectory(JUCE)
-juce_add_console_app(PP_Focus PRODUCT_NAME "PP Focus")
-target_sources(PP_Focus PRIVATE main.cpp writeToFile.cpp)
-target_compile_definitions(PP_Focus PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
 
-target_link_libraries(PP_Focus 
-    PRIVATE
-    juce::juce_audio_basics
-    juce::juce_audio_devices
-    juce::juce_audio_formats
-    juce::juce_audio_processors
+if(MSVC)
+    find_package(liblo CONFIG REQUIRED)
+else()
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(LIBLO REQUIRED IMPORTED_TARGET liblo)
+endif()
 
-    PUBLIC
-    juce::juce_recommended_config_flags
-    juce::juce_recommended_warning_flags
+add_subdirectory(csd_lib)
+
+juce_add_console_app(PP_C_Focus PRODUCT_NAME "PP_C_Focus")
+target_sources(PP_C_Focus PRIVATE main.cpp callback.cpp)
+target_compile_definitions(PP_C_Focus PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
+
+target_include_directories(PP_C_Focus PRIVATE ${LIBLO_INCLUDE_DIR})
+
+if(MSVC)  
+target_link_libraries(PP_C_Focus PRIVATE
+        audio
+        utils
+        effects
+        oscillators
+        
+        liblo::liblo 
+        #liblo::liblo-static
+
+        juce::juce_audio_basics
+        juce::juce_audio_devices
+        juce::juce_audio_formats
+        juce::juce_audio_processors
+
+        PUBLIC
+        juce::juce_recommended_config_flags
+        #        juce::juce_recommended_warning_flags
 )
+else()
+target_link_libraries(PP_C_Focus PRIVATE
+        audio
+        utils
+        effects
+        oscillators
+        
+        PkgConfig::LIBLO 
 
-target_compile_features(PP_Focus PRIVATE cxx_std_20)
+        juce::juce_audio_basics
+        juce::juce_audio_devices
+        juce::juce_audio_formats
+        juce::juce_audio_processors
 
+        PUBLIC
+        juce::juce_recommended_config_flags
+        #        juce::juce_recommended_warning_flags
+)
+endif()
+target_compile_features(PP_C_Focus PRIVATE cxx_std_20)
