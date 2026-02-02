@@ -13,8 +13,6 @@ public:
   void applyEffect(const float& input, float& output) override;
 
 private:
-  // hide default constructor
-  WaveShaper();
   float buffer[BUFFER_SIZE];
 };
 
