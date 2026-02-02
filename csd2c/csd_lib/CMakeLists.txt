@@ -7,18 +7,44 @@ target_compile_features(csd_lib PUBLIC cxx_std_20)
 target_include_directories(csd_lib
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/oscillators
+        ${CMAKE_CURRENT_SOURCE_DIR}/utils
+        ${CMAKE_CURRENT_SOURCE_DIR}/effects
+        ${LIBLO_INCLUDE_DIRS}
 )
-target_link_libraries(csd_lib
-    PUBLIC
-        audio_header
-        juce::juce_audio_basics
-        juce::juce_audio_devices
 
-        utils
-        oscillators
-        effects
-)
+
+if(MSVC)
+    find_package(liblo CONFIG REQUIRED)
+else()
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(LIBLO REQUIRED IMPORTED_TARGET liblo)
+endif()
+
+if(MSVC)
+    target_link_libraries(${libName}
+            PRIVATE
+            liblo::liblo
+            #liblo::liblo_static
+            ws2_32
+            iphlpapi
+            PUBLIC
+            audio_header
+            oscillators
+            juce::juce_audio_basics
+            juce::juce_audio_devices
+    )
+else()
+    target_link_libraries(csd_lib
+        PRIVATE
+            PkgConfig::LIBLO
+        PUBLIC
+            audio_header
+            oscillators
+            juce::juce_audio_basics
+            juce::juce_audio_devices
+    )
+endif()
+
 
 add_subdirectory(effects)
 add_subdirectory(oscillators)
