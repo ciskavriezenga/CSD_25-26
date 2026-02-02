@@ -1,0 +1,7 @@
+- Belangrijk om te beseffen wanneer een comment wel of niet nodig is.
+- Keep It Simple Stupid.
+- Double of triple check de DSP. Test het, write to file, use your ears.
+- Voorkom duplicate code door functies en classes te maken. Encapsulation is key.
+- Let op uitgecommente code, verwijder maar gewoon, als het toch niks staat te doen
+- Met betrekking tot de inheritance, let goed op waar je een functie aan maakt, zorg dat je bewust bent over wanneer iets in de baseclass moet en wanneer het beter in een derived class kan.
+- W.b.t. naamgeving, gebruik termen die representeren wat 'wat iets doet', en wees daar redelijk specifiek in. 

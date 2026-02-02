@@ -6,5 +6,6 @@
   - lib
   - jumpstart project folders
   - settings.h
-- custom callback forloop - welke outer en welke inner? met sine in tremolo blueprint project demo
-- tremolo samen uitwerken
+- Code aandachtspuntjes op basis van code projecten vorig blok
+- Custom callback forloop - welke outer en welke inner? met sine in tremolo blueprint project demo
+- Tremolo samen uitwerken
