@@ -3,12 +3,12 @@
 //
 
 #include "customCallback.h"
-#define EXAMPLE 0
+#define EXAMPLE 2
 
 void CustomCallback::prepare(int sampleRate)
 {
     sine.prepare(sampleRate);
-    sine.setFrequency(440.0);
+    sine.setFrequency(2.0f);
 }
 
 
@@ -25,8 +25,18 @@ void CustomCallback::process (AudioBuffer buffer) {
             // generate sine
             outputChannels[channel][sample] = sine.getSample();
 #else
+            // NOTE: For the sake of the example - contains duplicate code, and should be implemented in Tremolo class
+
+            // map output sine to the required range: [-1, 1] --> [0,1]
+            float modSignal = (sine.getSample() + 1.0f) * 0.5f;
+
+            static float modDepth = 0.25f;
+            modSignal *= modDepth;
+            float modulatedSample = inputChannels[channel][sample] * modSignal;
+
+
             // input to output
-            outputChannels[channel][sample] = inputChannels[channel][sample];
+            outputChannels[channel][sample] = inputChannels[channel][sample] * (1.0f - modDepth) + modulatedSample;
 #endif
         }
         sine.tick();

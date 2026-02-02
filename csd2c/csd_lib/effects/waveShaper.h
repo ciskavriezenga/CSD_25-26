@@ -10,7 +10,7 @@ public:
 
   // override base class method
   // applies tremolo effect to the input frame
-  float applyEffect(const float input) override;
+  void applyEffect(const float& input, float& output) override;
 
 private:
   // hide default constructor

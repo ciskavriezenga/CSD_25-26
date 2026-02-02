@@ -8,6 +8,8 @@ Boulanger, R. (Ed.). (2000). The Csound book: perspectives in software synthesis
 Trevino, J., & Allen, D. (2012). The Audio Programming Book, Edited by Richard Boulanger and Victor Lazzarini. Computer Music Journal, 36(2), 85-89.
 
 
+(Optimalisation: **DO NOT READ ;)** - Agner Fog - https://www.agner.org/optimize/#manuals - 1. Optimizing software in C++: An optimization guide for Windows, Linux and Mac platforms) 
+
 ## C++
 https://en.cppreference.com/
 

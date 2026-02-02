@@ -20,7 +20,7 @@
     - PLUG&PLAY FOCUS & CUSTOM FOCUS: Wizard of Ozz prototype (klinkend met bestaande effecten in bijv. Max of Ableton)
       <br></br>
   - **Presentatie van je design**: 
-    - essentie uit je docuemntatie uitlichtend, bijv. even in bullets en diagram in markdown / slides
+    - essentie uit je documentatie uitlichtend, bijv. even in bullets en diagram in markdown / slides
     - proof of concept presenteren / prototype laten playtesten
 
   

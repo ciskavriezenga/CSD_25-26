@@ -1,1 +1,3 @@
-add_subdirectory(tremolo)
+#add_subdirectory(1_tremolo)
+#add_subdirectory(2_applyEffectExample)
+add_subdirectory(3_applyEffectExample_csdlib)

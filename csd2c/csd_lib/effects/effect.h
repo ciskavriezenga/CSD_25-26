@@ -14,7 +14,7 @@ public:
   // not pure virtual, since not all subclasses require the samplerate
   virtual void prepare(float samplerate) { }
   // process frame
-  float processFrame(const float input);
+  void processFrame(const float& input, float& output);
   // returns the last outputted sample
   float getSample();
 
@@ -22,7 +22,7 @@ public:
 
 protected:
   // pure virtual method
-  virtual float applyEffect(const float input) = 0;
+  virtual void applyEffect(const float& input, float& output) = 0;
 
 private:
   // balance between dry and wet signal
