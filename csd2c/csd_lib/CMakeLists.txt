@@ -9,6 +9,7 @@ target_include_directories(csd_lib
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/utils
         ${CMAKE_CURRENT_SOURCE_DIR}/effects
+        ${CMAKE_CURRENT_SOURCE_DIR}/oscillators
         ${LIBLO_INCLUDE_DIRS}
 )
 
@@ -29,7 +30,6 @@ if(MSVC)
             iphlpapi
             PUBLIC
             audio_header
-            oscillators
             juce::juce_audio_basics
             juce::juce_audio_devices
     )
@@ -39,7 +39,6 @@ else()
             PkgConfig::LIBLO
         PUBLIC
             audio_header
-            oscillators
             juce::juce_audio_basics
             juce::juce_audio_devices
     )

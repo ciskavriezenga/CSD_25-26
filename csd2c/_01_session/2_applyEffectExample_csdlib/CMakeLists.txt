@@ -12,8 +12,6 @@ target_link_libraries(${ProjectId}
     PRIVATE
     csd_lib
 
-    juce::juce_audio_basics
-    juce::juce_audio_devices
     juce::juce_audio_formats
     juce::juce_audio_processors
 
