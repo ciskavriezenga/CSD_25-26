@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 project(PP_C_Focus VERSION 0.0.1)
 
 add_subdirectory(JUCE)
+add_subdirectory(csd_lib)
 
 if(MSVC)
     find_package(liblo CONFIG REQUIRED)
@@ -10,7 +11,7 @@ else()
     pkg_check_modules(LIBLO REQUIRED IMPORTED_TARGET liblo)
 endif()
 
-add_subdirectory(csd_lib)
+
 
 juce_add_console_app(PP_C_Focus PRODUCT_NAME "PP_C_Focus")
 target_sources(PP_C_Focus PRIVATE main.cpp callback.cpp)
@@ -20,12 +21,7 @@ target_include_directories(PP_C_Focus PRIVATE ${LIBLO_INCLUDE_DIR})
 
 if(MSVC)  
 target_link_libraries(PP_C_Focus PRIVATE
-        audio
-        utils
-        effects
-        oscillators
-        
-        liblo::liblo 
+        liblo::liblo
         #liblo::liblo-static
 
         juce::juce_audio_basics
@@ -34,6 +30,8 @@ target_link_libraries(PP_C_Focus PRIVATE
         juce::juce_audio_processors
 
         PUBLIC
+        csd_lib
+
         juce::juce_recommended_config_flags
         #        juce::juce_recommended_warning_flags
 )
