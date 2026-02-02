@@ -15,5 +15,3 @@
   - git pull csd repo --> copy blueprint project & compilen
   - tremolo code uit callback en in class plaatsen
 
-
-https://www.youtube.com/watch?v=xXfUsYNLw9E
