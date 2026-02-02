@@ -3,7 +3,8 @@ This project uses the JUCE framework to build a working One Knob plugin with an
 automatable parameter. Ready to be thrown into your DAW. 
 
 ## Prerequisites 
-- JUCE 
+- JUCE
+  You should already have JUCE installed. Add your JUCE dir to this project dir.
 
 ## Installing your Plugin 
 Follow the same steps as you normally would to compile your program. When 

@@ -37,15 +37,11 @@ target_compile_definitions(PluginFocus
 
 target_link_libraries(PluginFocus
         PRIVATE
-        audio
-        utils
-        effects
-        oscillators
+        csd_lib
 
         juce::juce_audio_utils
         juce::juce_product_unlocking
         juce::juce_data_structures
-
 
         PUBLIC
         juce::juce_recommended_config_flags
