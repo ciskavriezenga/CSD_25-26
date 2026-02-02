@@ -10,10 +10,7 @@ target_compile_definitions(${ProjectId} PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL
 
 target_link_libraries(${ProjectId}
     PRIVATE
-    audio
-    utils
-    effects
-    oscillators
+    csd_lib
 
     juce::juce_audio_basics
     juce::juce_audio_devices

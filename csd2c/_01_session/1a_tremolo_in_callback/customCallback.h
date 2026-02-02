@@ -6,7 +6,7 @@
 #define CUSTOMCALLBACK_H
 
 #include "audiocomponent.h"
-#include "sine.h"
+#include "oscillators/sine.h"
 #include "settings.h"
 #include <iostream>
 #include <random>
