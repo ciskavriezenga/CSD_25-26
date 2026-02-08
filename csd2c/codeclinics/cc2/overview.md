@@ -9,26 +9,28 @@
 * wanneer nodig in M&T context?
 
 ## CC2 - Opdracht
-Maak een static Interpolation class met de volgende functies, gebruik hierbij floats als datatype:
-* `nnMap(value, low, high)`
-  _returns the nearest-neighbour value of the passed value within the given range_
-    * value: a normalized value within range [0, 1]
-    * low: the lower bound of the range
-    * high: the upper bound of the range
+1. Werk de onderstaande functies uit in pseudo code, gebruik hierbij floats als datatype:
+   * `nnMap(value, low, high)`
+     _returns the nearest-neighbour value of the passed value within the given range_
+       * value: a normalized value within range [0, 1]
+       * low: the lower bound of the range
+       * high: the upper bound of the range
 
-* `linMap(value, low, high)`
-  _returns the linearly interpolated value of the passed value within the given range_
-    * value: a normalized value within range [0, 1]
-    * low: the lower bound of the range
-    * high: the upper bound of the range
+   * `linMap(value, low, high)`
+     _returns the linearly interpolated value of the passed value within the given range_
+       * value: a normalized value within range [0, 1]
+       * low: the lower bound of the range
+       * high: the upper bound of the range
 
-* `mapInRange(value, fromLow, fromHigh, toLow, toHigh)`
-  _returns the mapped value from one range to another_
-    * fromLow: the lower bound of the value’s current range.
-    * fromHigh: the upper bound of the value’s current range.
-    * toLow: the lower bound of the value’s target range.
-    * toHigh: the upper bound of the value’s target range.
+   * `mapInRange(value, fromLow, fromHigh, toLow, toHigh)`
+     _returns the mapped value from one range to another_
+       * fromLow: the lower bound of the value’s current range.
+       * fromHigh: the upper bound of the value’s current range.
+       * toLow: the lower bound of the value’s target range.
+       * toHigh: the upper bound of the value’s target range.
 
+2. Playtest elkaars pseudo code (d.w.z. loop de code van de ander door met een aantal getallen, bereken de output adhv de pseudo code en check of de output klopt.)
+3. Werk de bovenstaande functies uit in c++, in een static Interpolation class _(je kunt cc2/01_interpolationSession gebruiken als startpunt, wel even de cmaketxt aanpassen na kopieren)_ óf namespace met losse functies voor de liefhebbers. 
 
 ##### *Voor diehards*
 * Maak een WavetableOscillator class die erft van Oscillator (blok2b) en 
