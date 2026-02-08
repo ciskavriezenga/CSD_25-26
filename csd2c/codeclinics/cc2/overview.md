@@ -9,7 +9,7 @@
 * wanneer nodig in M&T context?
 
 ## CC2 - Opdracht
-1. Werk de onderstaande functies uit in pseudo code, gebruik hierbij floats als datatype:
+1. Werk de onderstaande functies uit in pseudo code **met pen en papier**, gebruik hierbij floats als datatype:
    * `nnMap(value, low, high)`
      _returns the nearest-neighbour value of the passed value within the given range_
        * value: a normalized value within range [0, 1]
