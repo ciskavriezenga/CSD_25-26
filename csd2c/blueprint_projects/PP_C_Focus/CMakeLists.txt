@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 project(PP_C_Focus VERSION 0.0.1)
 
-add_subdirectory(JUCE)
 add_subdirectory(csd_lib)
 
 if(MSVC)
