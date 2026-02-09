@@ -12,13 +12,13 @@
 1. Werk de onderstaande functies uit in pseudo code **met pen en papier**, gebruik hierbij floats als datatype:
    * `nnMap(value, low, high)`
      _returns the nearest-neighbour value of the passed value within the given range_
-       * value: a normalized value within range [0, 1]
+       * value: input value
        * low: the lower bound of the range
        * high: the upper bound of the range
 
-   * `linMap(value, low, high)`
-     _returns the linearly interpolated value of the passed value within the given range_
-       * value: a normalized value within range [0, 1]
+   * `linMap(factor, low, high)`
+     _returns the linearly interpolated value of the passed factor within the given range_
+       * factor: a normalized value within range [0, 1]
        * low: the lower bound of the range
        * high: the upper bound of the range
 
