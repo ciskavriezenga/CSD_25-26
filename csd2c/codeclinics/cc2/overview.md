@@ -17,7 +17,7 @@
        * high: the upper bound of the range
 
    * `linMap(factor, low, high)`
-     _returns the linearly interpolated value of the passed factor within the given range_
+     _returns the linearly interpolated value between the given range using a factor to determine a proportionate output_
        * factor: a normalized value within range [0, 1]
        * low: the lower bound of the range
        * high: the upper bound of the range
