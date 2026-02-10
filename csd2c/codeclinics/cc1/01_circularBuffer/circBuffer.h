@@ -12,7 +12,7 @@ public:
 	CircBuffer(uint size, uint distanceRW);
 	~CircBuffer();
 
-  // resets the size of the buffer
+  	// resets the size of the buffer
 	void resetSize(uint size);
 
 	// setter and getter for the distance between read and write head
@@ -22,17 +22,17 @@ public:
 	inline void write(float val) { m_buffer[m_writeH] = val; }
 	inline float read() { return m_buffer[m_readH]; }
 
-  // method to set a step in time --> move to next sample
-  inline void tick() {
-    incrWriteH();
-    incrReadH();
-  }
+  	// method to set a step in time --> move to next sample
+  	inline void tick() {
+    	incrWriteH();
+    	incrReadH();
+  	}
 
 	// debug methods
 	void logRWPos();
-  void logDistanceRW();
-  void logSize();
-  void logAllSettings();
+  	void logDistanceRW();
+  	void logSize();
+  	void logAllSettings();
 	void logAllValues();
 
 private:
@@ -47,18 +47,18 @@ private:
 		wrapH(m_readH);
 	}
 
-  // wrap a head if necessary
-  inline void wrapH(uint& head) {
-    if (head >= m_size) head -= m_size;
-  }
+	// wrap a head if necessary
+	inline void wrapH(uint& head) {
+		if (head >= m_size) head -= m_size;
+	}
 
-  // allocate and release methods, used to alter the buffer size
-  void allocateBuffer();
-  void releaseBuffer();
+	// allocate and release methods, used to alter the buffer size
+	void allocateBuffer();
+	void releaseBuffer();
 
-  // pointer to the buffer
+	// pointer to the buffer
 	float* m_buffer;
-  // buffer size
+	// buffer size
 	uint m_size;
 	// read and write heads, delay size
 	uint m_readH;

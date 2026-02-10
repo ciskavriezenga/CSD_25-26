@@ -21,7 +21,7 @@ void WaveShaper::applyEffect(const float &input, float &output)
   // TODO - interpolate
   output = buffer[index];
 #else
-  static float k = 100.0f;
+  static float k = 4.0f;
   static float normalizeFactor = 1.0f / atan(k);
   output = normalizeFactor * atan(k * input);
 #endif

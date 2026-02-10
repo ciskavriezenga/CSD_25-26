@@ -8,7 +8,7 @@ CircBuffer::CircBuffer(uint size, uint distanceRW) : m_size(size),
   m_readH(0), m_writeH(0)
 {
 	allocateBuffer();
-  setDistanceRW(distanceRW);
+  	setDistanceRW(distanceRW);
 }
 
 
@@ -26,7 +26,7 @@ void CircBuffer::resetSize(uint size)
 
 void CircBuffer::allocateBuffer()
 {
-	// allocate buffer and set all samples to 0
+  	// allocate buffer and set all samples to 0
 	m_buffer = (float*)malloc(m_size * sizeof(float));
 	memset(m_buffer, 0, m_size * sizeof(float));
 }

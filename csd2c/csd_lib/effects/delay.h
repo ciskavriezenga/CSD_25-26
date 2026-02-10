@@ -6,8 +6,8 @@ typedef unsigned int uint;
 class Delay : public Effect
 {
 public:
-  Delay(float feedback = 0.7, uint numDelaySamples = 2048,
-    uint maxDelaySize = 2048, float dryWet = 1.0);
+  Delay(float feedback = 0.5, uint numDelaySamples = 22050,
+    uint maxDelaySize = 44100, float dryWet = 0.5);
   ~Delay();
 
   // override base class method
