@@ -11,7 +11,7 @@ else()
 endif()
 
 
-
+add_subdirectory(JUCE)
 juce_add_console_app(PP_C_Focus PRODUCT_NAME "PP_C_Focus")
 target_sources(PP_C_Focus PRIVATE main.cpp callback.cpp)
 target_compile_definitions(PP_C_Focus PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")

@@ -5,19 +5,23 @@ target_include_directories(audio_header INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/au
 add_library(csd_lib STATIC)
 target_compile_features(csd_lib PUBLIC cxx_std_20)
 target_include_directories(csd_lib
+    PRIVATE
+        ${LIBLO_INCLUDE_DIRS}
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/utils
         ${CMAKE_CURRENT_SOURCE_DIR}/effects
         ${CMAKE_CURRENT_SOURCE_DIR}/oscillators
-        ${LIBLO_INCLUDE_DIRS}
+
 )
 
 if(MSVC)
     find_package(liblo CONFIG REQUIRED)
 else()
-    find_package(PkgConfig REQUIRED)
-    pkg_check_modules(LIBLO REQUIRED IMPORTED_TARGET liblo)
+#    find_package(PkgConfig REQUIRED)
+#    pkg_check_modules(LIBLO REQUIRED IMPORTED_TARGET liblo)
+    find_library(LIBLO_LIBRARY NAMES lo)
+    find_path(LIBLO_INCLUDE_DIR lo/lo.h)
 endif()
 
 if(MSVC)
@@ -35,7 +39,8 @@ if(MSVC)
 else()
     target_link_libraries(csd_lib
         PRIVATE
-            PkgConfig::LIBLO
+            #PkgConfig::LIBLO
+            ${LIBLO_LIBRARY}
         PUBLIC
             audio_header
             juce::juce_audio_basics
