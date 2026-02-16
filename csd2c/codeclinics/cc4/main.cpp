@@ -27,7 +27,8 @@ struct CustomCallback : AudioCallback {
 
 
         for (auto sample = 0u; sample < numFrames; ++sample) {
-            float oscSample = saw.genNextSample() * 0.2f;
+            saw.tick();
+            float oscSample = saw.getSample() * 0.2f;
             float filteredOutput = filter.process(oscSample);
             for(auto channel = 0u; channel < numOutputChannels; ++channel) {
                 outputChannels[channel][sample] = filteredOutput;
@@ -36,7 +37,7 @@ struct CustomCallback : AudioCallback {
     }
 
 
-    Saw saw;
+    Saw saw {200};
     IIRFilter filter;
 };
 
