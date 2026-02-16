@@ -19,7 +19,7 @@ target_compile_definitions(PP_C_Focus PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0
 target_include_directories(PP_C_Focus PRIVATE ${LIBLO_INCLUDE_DIR})
 
 if(MSVC)  
-target_link_libraries(PP_C_Focus PRIVATE
+    target_link_libraries(PP_C_Focus PRIVATE
         csd_lib
         liblo::liblo
         #liblo::liblo-static
