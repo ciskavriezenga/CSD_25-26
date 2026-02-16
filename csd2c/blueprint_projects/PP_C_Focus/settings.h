@@ -4,9 +4,9 @@
 #define WRITE_TO_FILE_MODE 0
 // 0: Audio Output
 // 1: Write Output 
-// 2: Write + Audio Output
-// 3: Write Input + Output 
-// 4: Write Input + Output + Audio
+// 2: Write Output + Audio Output
+// 3: Write Input + Write Output
+// 4: Write Input + Write Output + Audio Output
 ////////////////////////////////////////////////////////////////////////////////
 #define AUDIO_DEVICE_MODE 0
 // 0. Use system default

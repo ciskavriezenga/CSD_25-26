@@ -9,6 +9,7 @@
 #include <iostream>
 #include <limits>
 #include <cstdlib>
+#include "../settings.h"
 
 
 struct AudioBuffer {
