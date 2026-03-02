@@ -5,7 +5,7 @@ target_compile_definitions(Filters PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
 
 target_link_libraries(Filters
         PRIVATE
-        oscillators
+        csd_lib
 
         juce::juce_audio_basics
         juce::juce_audio_devices
