@@ -88,9 +88,8 @@ public class Envelope : Generator {
 		sample = startValue + phase * slope;
 	}
 
-	protected int nextIndex() {		
-		currentIndex++;
-		if (currentIndex + 1 >= numValues) {			
+	protected int nextIndex() {
+		if (++currentIndex + 1 >= numValues) {
 			currentIndex = -1;
 			sample = 0;
 		}
