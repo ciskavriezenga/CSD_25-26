@@ -33,6 +33,7 @@ int main( int argc, char **argv ){
 
   Mat grayImage;
   cvtColor(image, grayImage, COLOR_BGR2GRAY);
+
   imwrite( "../../assets/images/Gray_Image.jpg", grayImage );
 
   // ==========  show result ==========

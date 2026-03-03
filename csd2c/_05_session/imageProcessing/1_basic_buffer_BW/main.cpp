@@ -6,6 +6,7 @@
 #define W 4
 #define H 3
 
+
 using namespace cv;
 
 void logValues(uchar* &m, uint wStart, uint hStart, uint wEnd, uint hEnd) {

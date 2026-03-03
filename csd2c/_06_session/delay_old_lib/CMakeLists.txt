@@ -1,0 +1,4 @@
+add_subdirectory(1_delay_simple)
+add_subdirectory(2_delay_calculated_delta)
+add_subdirectory(3_line_signal)
+add_subdirectory(4_delay_signal_interpolated)

@@ -57,7 +57,7 @@ int main( int argc, char **argv ){
       buffer[j + yOffset] = (red << 16) + (green << 8) + blue;
     }
   }
-  #elif 0
+  #elif 1
   // loop through pixels and set color
   uint red = 255;
   uint green = 0;

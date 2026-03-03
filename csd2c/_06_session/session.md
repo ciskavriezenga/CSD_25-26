@@ -6,4 +6,7 @@
 ## Content
 - Presentatie - R & A
 - Trouble shooting waar nodig
-- Multi-threading - voorbeeld delay + parameter aanpassen vanuit de ui
+- Envelope
+  - Ook te gebruiken als Line? Voor aanpassing delay tijd?
+- Delay met aanpasbare delay tijd
+  - Multi-threading - voorbeeld delay + parameter aanpassen vanuit de ui

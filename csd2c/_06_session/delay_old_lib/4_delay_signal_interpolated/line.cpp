@@ -1,0 +1,49 @@
+//
+// Created by Ciska Vriezenga on 26/05/2025.
+//
+
+#include "line.h"
+
+Line::Line() : m_active(false), m_phase (0.0f),
+m_phaseIncrement(0.0f), m_slope(0) {}
+
+Line::~Line() {}
+
+void Line::changeToValue(float targetValue, float lineDurationMs) {
+  // TODO - add validation for targetValue
+
+  // TODO - check what happens for lineDurationMS == 0
+
+  // cache current sample as start value
+  m_startValue = m_sample;
+
+  // reset phase
+  m_phase = 0.0f;
+  m_phaseIncrement = 1.0f / (m_samplerate * lineDurationMs);
+  m_slope = targetValue - m_sample;
+
+  // start
+  m_active = true;
+}
+
+float Line::getNextSample() {
+  // If line is 'running' / interpolating
+  if (m_active) {
+    //increment phase
+    m_phase += m_phaseIncrement;
+
+    //check if phase exceeds end
+    if (m_phase > 1.0) {
+      // we are done
+      m_active = false;
+    }
+    // calculate the new sample
+    calculateSample ();
+  }
+  // TODO - implement
+  return m_sample;
+}
+
+void Line::calculateSample() {
+  m_sample = m_startValue + m_phase * m_slope;
+}
