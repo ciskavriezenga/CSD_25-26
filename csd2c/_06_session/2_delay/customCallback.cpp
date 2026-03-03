@@ -13,8 +13,7 @@ void CustomCallback::process (AudioBuffer buffer) {
 
     for (int sampleIndex = 0u; sampleIndex < numFrames; ++sampleIndex) {
         for (int channel = 0u; channel < numOutputChannels; ++channel) {
-            // TODO - implement Envelope class
-            float envelopeOutput = 0f;
+            // TODO - add Changeable Delay class (and Signal and Line)
             outputChannels[channel][sampleIndex] = inputChannels[0][sampleIndex] * envelopeOutput;
         }
     }
