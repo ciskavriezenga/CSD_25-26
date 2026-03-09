@@ -13,9 +13,13 @@ public:
   virtual ~Line();
   float getNextSample() override;
 
-  void changeToValue(float value, float lineDurationMs = 0.01f);
+  // directly set the new value
+  void jumpToValue(float value);
+  // smoothly transition to the new value
+  void moveToValue(float value, float lineDurationMs = 0.01f);
+
 protected:
-  void calculateSample();
+  void calculateValue();
 
   std::atomic<bool> m_active;
   std::atomic<float> m_startValue;
@@ -24,7 +28,5 @@ protected:
   std::atomic<float> m_slope;
 
 };
-
-
 
 #endif //LINE_H

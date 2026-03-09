@@ -12,7 +12,7 @@ public:
   virtual ~Effect();
 
   // not pure virtual, since not all subclasses require the samplerate
-  virtual void prepare(float samplerate) { }
+  virtual void prepare(float sampleRate) { }
   // process frame
   void processFrame(const float& input, float& output);
   // returns the last outputted sample

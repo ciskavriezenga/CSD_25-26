@@ -4,7 +4,10 @@
 
 #include "customCallback.h"
 
-void CustomCallback::prepare(int sampleRate) {}
+void CustomCallback::prepare(int sampleRate)
+{
+
+}
 
 void CustomCallback::process (AudioBuffer buffer) {
     auto [inputChannels, outputChannels, numInputChannels, numOutputChannels, numFrames] = buffer;

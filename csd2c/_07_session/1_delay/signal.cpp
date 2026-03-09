@@ -16,8 +16,8 @@ void Signal::prepare(float samplerate) {
   m_samplerate = samplerate;
 }
 
-float Signal::getSample()
+float Signal::getValue()
 {
-  return m_sample;
+  return m_value;
 }
 

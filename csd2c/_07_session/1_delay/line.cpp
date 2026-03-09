@@ -9,18 +9,23 @@ m_phaseIncrement(0.0f), m_slope(0) {}
 
 Line::~Line() {}
 
-void Line::changeToValue(float targetValue, float lineDurationMs) {
+
+void Line::jumpToValue(float value) {
+  m_active = false;
+}
+
+void Line::moveToValue(float targetValue, float lineDurationMs) {
   // TODO - add validation for targetValue
 
   // TODO - check what happens for lineDurationMS == 0
 
   // cache current sample as start value
-  m_startValue = m_sample;
+  m_startValue = m_value;
 
   // reset phase
   m_phase = 0.0f;
-  m_phaseIncrement = 1.0f / (m_samplerate * lineDurationMs);
-  m_slope = targetValue - m_sample;
+  m_phaseIncrement = 1.0f / (m_valuerate * lineDurationMs);
+  m_slope = targetValue - m_value;
 
   // start
   m_active = true;
@@ -41,9 +46,9 @@ float Line::getNextSample() {
     calculateSample ();
   }
   // TODO - implement
-  return m_sample;
+  return m_value;
 }
 
 void Line::calculateSample() {
-  m_sample = m_startValue + m_phase * m_slope;
+  m_value = m_startValue + m_phase * m_slope;
 }
