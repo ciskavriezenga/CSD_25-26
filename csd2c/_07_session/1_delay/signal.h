@@ -11,14 +11,14 @@ public:
   Signal();
   virtual ~Signal();
   // not pure virtual, since not all subclasses require the samplerate
-  void prepare(float samplerate);
+  void prepare(float sampleRate);
 
-  virtual float getNextSample() = 0;
+  virtual float getNextValue() = 0;
   float getValue();
 
 protected:
   float m_value;
-  float m_samplerate;
+  float m_sampleRate;
   //private:
 
 

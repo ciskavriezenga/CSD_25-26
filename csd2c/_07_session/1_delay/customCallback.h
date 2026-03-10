@@ -6,10 +6,7 @@
 #define CUSTOMCALLBACK_H
 
 #include "audiocomponent.h"
-#include "sine.h"
-#include "wavetableGenerator.h"
-#include "waveShaper.h"
-#include "delay.h"
+#include "changeableDelay.h"
 #include "settings.h"
 #include <iostream>
 #include <random>
@@ -27,8 +24,10 @@ public:
 
     void process (AudioBuffer buffer) override;
 
-private:
+    void adaptDelayTime(float deltaDelayTime);
 
+private:
+    ChangeableDelay delay;
 };
 
 

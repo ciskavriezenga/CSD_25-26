@@ -14,6 +14,12 @@ int main() {
             case 'q':
                 running = false;
                 break;
+            case 'w': // higher delay time
+                audioSource.adaptDelayTime(0.1);
+                break;
+            case 's': // lower delay time
+                audioSource.adaptDelayTime(-0.1);
+                break;
         }
     }
 

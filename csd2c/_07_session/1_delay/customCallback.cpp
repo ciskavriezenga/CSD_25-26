@@ -6,7 +6,7 @@
 
 void CustomCallback::prepare(int sampleRate)
 {
-
+    delay.prepare(sampleRate);
 }
 
 void CustomCallback::process (AudioBuffer buffer) {
@@ -15,13 +15,16 @@ void CustomCallback::process (AudioBuffer buffer) {
     float outputSample2 = 0.0f;
 
     for (int sampleIndex = 0u; sampleIndex < numFrames; ++sampleIndex) {
-        for (int channel = 0u; channel < numOutputChannels; ++channel) {
-            // TODO - add Changeable Delay class (and Signal and Line)
-            outputChannels[channel][sampleIndex] = inputChannels[0][sampleIndex] * envelopeOutput;
+        // NOTE: forced one channel output for now
+        for (int channel = 0u; channel < 1; ++channel) {
+            delay.applyEffect(inputChannels[0][sampleIndex] * 10.0f, outputChannels[channel][sampleIndex]);
         }
     }
+}
 
-
-
-
+void CustomCallback::adaptDelayTime(float deltaDelayTime)
+{
+    float currentDelayTime = delay.getDelayTime();
+    std::cout << currentDelayTime << std::endl;
+    delay.setDelayTime(currentDelayTime + deltaDelayTime);
 }

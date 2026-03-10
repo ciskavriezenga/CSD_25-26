@@ -11,7 +11,7 @@ class Line : public Signal {
 public:
   Line();
   virtual ~Line();
-  float getNextSample() override;
+  float getNextValue() override;
 
   // directly set the new value
   void jumpToValue(float value);

@@ -4,7 +4,7 @@
 
 #include "signal.h"
 
-Signal::Signal() : m_sample(0.0f), m_samplerate(48000) {
+Signal::Signal() : m_value(0.0f), m_sampleRate(48000) {
 
 }
 
@@ -12,8 +12,8 @@ Signal::~Signal() {
 
 }
 
-void Signal::prepare(float samplerate) {
-  m_samplerate = samplerate;
+void Signal::prepare(float sampleRate) {
+  m_sampleRate = sampleRate;
 }
 
 float Signal::getValue()

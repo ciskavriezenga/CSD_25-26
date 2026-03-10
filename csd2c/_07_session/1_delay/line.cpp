@@ -4,8 +4,11 @@
 
 #include "line.h"
 
+#include <iostream>
+#include <ostream>
+
 Line::Line() : m_active(false), m_phase (0.0f),
-m_phaseIncrement(0.0f), m_slope(0) {}
+               m_phaseIncrement(0.0f), m_slope(0) {}
 
 Line::~Line() {}
 
@@ -24,14 +27,13 @@ void Line::moveToValue(float targetValue, float lineDurationMs) {
 
   // reset phase
   m_phase = 0.0f;
-  m_phaseIncrement = 1.0f / (m_valuerate * lineDurationMs);
+  m_phaseIncrement = 1.0f / (m_sampleRate * lineDurationMs);
   m_slope = targetValue - m_value;
-
   // start
   m_active = true;
 }
 
-float Line::getNextSample() {
+float Line::getNextValue() {
   // If line is 'running' / interpolating
   if (m_active) {
     //increment phase
@@ -42,13 +44,13 @@ float Line::getNextSample() {
       // we are done
       m_active = false;
     }
-    // calculate the new sample
-    calculateSample ();
+    // calculate the new value
+    calculateValue ();
   }
   // TODO - implement
   return m_value;
 }
 
-void Line::calculateSample() {
+void Line::calculateValue() {
   m_value = m_startValue + m_phase * m_slope;
 }
