@@ -17,7 +17,7 @@ void CustomCallback::process (AudioBuffer buffer) {
     for (int sampleIndex = 0u; sampleIndex < numFrames; ++sampleIndex) {
         // NOTE: forced one channel output for now
         for (int channel = 0u; channel < 1; ++channel) {
-            delay.applyEffect(inputChannels[0][sampleIndex] * 10.0f, outputChannels[channel][sampleIndex]);
+            delay.applyEffect(inputChannels[0][sampleIndex], outputChannels[channel][sampleIndex]);
         }
     }
 }
