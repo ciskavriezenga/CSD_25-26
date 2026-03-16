@@ -13,12 +13,19 @@
 
 
 struct AudioBuffer {
+  // write to file mode 5 --> overwrite input with 0, first sample to 1
+#if WRITE_TO_FILE_MODE != 5
   const float** inputChannels;
+#else
+  float** inputChannels;
+#endif
   float** outputChannels;
   int numInputChannels, numOutputChannels, numFrames;
 
 private:
 };
+
+
 
 class AudioCallback : public juce::AudioSource {
 public:
@@ -47,7 +54,7 @@ public:
 #if WRITE_TO_FILE_MODE == 0
     juce::ignoreUnused (numChannels);
     return;
-#elif WRITE_TO_FILE_MODE == 1 || WRITE_TO_FILE_MODE == 2
+#elif WRITE_TO_FILE_MODE == 1 || WRITE_TO_FILE_MODE == 2 || WRITE_TO_FILE_MODE == 5
     for (auto i = 0u; i < numChannels; ++i) {
       std::string fileName = writePath + "/output_channel_" + std::to_string (i) + ".csv";
       fileWriter.emplace_back (std::make_unique<WriteToFile> (fileName, true));
@@ -125,21 +132,52 @@ private:
 
   void processBlock (const juce::AudioSourceChannelInfo& bufferToFill) {
     const auto buffer =
-      AudioBuffer { .inputChannels = const_cast<const float**> (
-                      bufferToFill.buffer->getArrayOfReadPointers()),
-                    .outputChannels = const_cast<float**> (
-                      bufferToFill.buffer->getArrayOfWritePointers()),
-                    .numInputChannels = bufferToFill.buffer->getNumChannels(),
-                    .numOutputChannels = bufferToFill.buffer->getNumChannels(),
-                    .numFrames = bufferToFill.buffer->getNumSamples() };
+      AudioBuffer {
+#if WRITE_TO_FILE_MODE != 5
+        .inputChannels = const_cast<const float**> (
+        bufferToFill.buffer->getArrayOfReadPointers()),
+#else
+        .inputChannels = const_cast<float**> (
+        bufferToFill.buffer->getArrayOfReadPointers()),
+#endif
+
+        .outputChannels = const_cast<float**> (
+        bufferToFill.buffer->getArrayOfWritePointers()),
+        .numInputChannels = bufferToFill.buffer->getNumChannels(),
+        .numOutputChannels = bufferToFill.buffer->getNumChannels(),
+        .numFrames = bufferToFill.buffer->getNumSamples()
+      };
 
 #if WRITE_TO_FILE_MODE == 3 || WRITE_TO_FILE_MODE == 4
     writeBlock (buffer, WriteMode::INPUT);
+#elif WRITE_TO_FILE_MODE == 5
+    auto [inputChannels, outputChannels, numInputChannels, numOutputChannels, numFrames] = buffer;
+    // set all input samples to 0
+    for (int sample = 0u; sample < numFrames; ++sample) {
+      for (int channel = 0u; channel < numInputChannels; ++channel) {
+        inputChannels[channel][sample] = 0.0f;
+        }
+    }
+
+    // set first sample to 1, in case when it is the first sample ever
+    static bool atFirstSample = true;
+
+    if (atFirstSample) {
+      for (int channel = 0u; channel < numInputChannels; ++channel) {
+        inputChannels[channel][0] = 1.0f;
+      }
+      atFirstSample = false;
+    }
+
 #endif
+
+
+
+
 
     process (buffer);
 
-#if WRITE_TO_FILE_MODE == 1 || WRITE_TO_FILE_MODE == 3 
+#if WRITE_TO_FILE_MODE == 1 || WRITE_TO_FILE_MODE == 3 || WRITE_TO_FILE_MODE == 5
     writeBlock (buffer, WriteMode::OUTPUT); 
     clearOutput(buffer);
 #endif
