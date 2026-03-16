@@ -160,11 +160,11 @@ private:
     }
 
     // set first sample to 1, in case when it is the first sample ever
-    static bool atFirstSample = true;
+    static int atFirstSample = true;
 
     if (atFirstSample) {
       for (int channel = 0u; channel < numInputChannels; ++channel) {
-        inputChannels[channel][0] = 1.0f;
+        inputChannels[channel][9] = 1.0f;
       }
       atFirstSample = false;
     }
