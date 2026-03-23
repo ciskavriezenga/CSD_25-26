@@ -41,11 +41,6 @@ target_sources(OpenLadder
         PluginProcessor.cpp
         BinaryData/BinaryData.cpp
 )
-
-target_include_directories(OpenLadder
-    PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/BinaryData
-)
 ```
 
 ---
