@@ -21,13 +21,9 @@ public:
         const auto bounds = juce::Rectangle<float> ((float) x, (float) y, (float) width, (float) height);
         const auto angle = juce::jmap (sliderPosProportional, 0.0f, 1.0f, rotaryStartAngle, rotaryEndAngle);
 
-        auto t = juce::AffineTransform::rotation (angle, bounds.getCentreX(), bounds.getCentreY());
-        t = t.scaled (bounds.getWidth() / knobDrawable->getWidth(),
-                      bounds.getHeight() / knobDrawable->getHeight(),
-                      bounds.getX(),
-                      bounds.getY());
-
-        knobDrawable->draw (g, 1.0f, t);
+        juce::Graphics::ScopedSaveState saveState (g);
+        g.addTransform (juce::AffineTransform::rotation (angle, bounds.getCentreX(), bounds.getCentreY()));
+        knobDrawable->drawWithin (g, bounds, juce::RectanglePlacement::centred, 1.0f);
     }
 
 private:

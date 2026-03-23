@@ -2,6 +2,7 @@
 
 #include "PluginProcessor.h"
 #include "ParameterID.hpp"
+#include "svgslider.h" 
 //==============================================================================
 namespace plugin_focus {
 class AudioPluginAudioProcessorEditor final : public juce::AudioProcessorEditor

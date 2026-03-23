@@ -6,15 +6,12 @@
 
 ## 1. Build the JUCE BinaryBuilder
 
-The BinaryBuilder tool ships with JUCE source. Build it from the JUCE repo root:
+The BinaryBuilder tool ships with JUCE source. Build it from the Top level of your cmake project.
 
-```bash
-cmake -S /path/to/JUCE/extras/BinaryBuilder -B BinaryBuilder/build
-cmake --build BinaryBuilder/build --config Release
+```bash 
+    cmake . -B build -DJUCE_BUILD_EXTRAS=ON
+    cmake --build build --target BinaryBuilder
 ```
-
-Binary lands in `BinaryBuilder/build/` (or `BinaryBuilder/build/Release/` on Windows).
-
 ---
 
 ## 2. Generate BinaryData from your PNG
