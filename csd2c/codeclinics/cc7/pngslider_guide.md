@@ -16,10 +16,10 @@ The BinaryBuilder tool ships with JUCE source. Build it from the Top level of yo
 
 ## 2. Generate BinaryData from your PNG
 
-Run BinaryBuilder with three arguments: **output dir**, **class name**, **input file(s)**:
+Run BinaryBuilder with three arguments: **input dir**, **output dir**, **class name**:
 
 ```bash
-./BinaryBuilder ./BinaryData BinaryData /path/to/knob.png
+./BinaryBuilder <folder with images> <folder where you want your binary data> <a class name for your binary data> 
 ```
 
 This produces two files in `./BinaryData/`:
@@ -39,7 +39,7 @@ target_sources(OpenLadder
     PRIVATE
         PluginEditor.cpp
         PluginProcessor.cpp
-        BinaryData/BinaryData.cpp
+        BinaryData.cpp
 )
 ```
 
