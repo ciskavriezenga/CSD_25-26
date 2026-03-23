@@ -1,0 +1,86 @@
+# PNG Slider — BinaryData
+
+`pngslider.h` provides `PNGSliderLookAndFeel`: a rotary slider skin that takes a single PNG image from `BinaryData` and rotates it to match the knob position.
+
+---
+
+## 1. Build the JUCE BinaryBuilder
+
+The BinaryBuilder tool ships with JUCE source. Build it from the JUCE repo root:
+
+```bash
+cmake -S /path/to/JUCE/extras/BinaryBuilder -B BinaryBuilder/build
+cmake --build BinaryBuilder/build --config Release
+```
+
+Binary lands in `BinaryBuilder/build/` (or `BinaryBuilder/build/Release/` on Windows).
+
+---
+
+## 2. Generate BinaryData from your PNG
+
+Run BinaryBuilder with three arguments: **output dir**, **class name**, **input file(s)**:
+
+```bash
+./BinaryBuilder ./BinaryData BinaryData /path/to/knob.png
+```
+
+This produces two files in `./BinaryData/`:
+- `BinaryData.h`
+- `BinaryData.cpp`
+
+The PNG is accessible as `BinaryData::knob_png` and `BinaryData::knob_pngSize`.
+
+---
+
+## 3. Add to CMakeLists.txt
+
+Add the generated source files to your target and make sure the header is on the include path:
+
+```cmake
+target_sources(OpenLadder
+    PRIVATE
+        PluginEditor.cpp
+        PluginProcessor.cpp
+        BinaryData/BinaryData.cpp
+)
+
+target_include_directories(OpenLadder
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/BinaryData
+)
+```
+
+---
+
+## 4. Use in PluginEditor
+
+### PluginEditor.h
+
+```cpp
+#include "BinaryData.h"
+#include "pngslider.h"
+
+//  under private
+PNGSliderLookAndFeel pngSlider { BinaryData::knob_png, BinaryData::knob_pngSize };
+```
+
+### PluginEditor.cpp — constructor
+
+```cpp
+CutoffSlider.setLookAndFeel (&pngSlider);
+```
+
+### PluginEditor.cpp — destructor
+
+```cpp
+CutoffSlider.setLookAndFeel (nullptr);
+```
+
+---
+
+## Notes
+
+- The PNG should depict the knob at its **start** position. The LookAndFeel rotates it based on slider value.
+- Use a square image for best results. Images that aren't square will be stretched to fit the slider bounds.
+- If the image fails to load, `drawRotarySlider` will draw nothing. 
