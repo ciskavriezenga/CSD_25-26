@@ -27,7 +27,7 @@ A more portable approach — resolve relative to the executable:
 **Constructor** — attach to any rotary slider:
 
 ```cpp
-CutoffSlider.setLookAndFeel (&svgSlider;
+CutoffSlider.setLookAndFeel (&svgSlider);
 ```
 
 **Destructor** — always clear it:
