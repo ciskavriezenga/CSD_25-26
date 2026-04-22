@@ -1,6 +1,6 @@
 # Deliverables CSD2
  
-In de eerste weken werk je de projectbeschrijving uit. Punten die betrekking hebben op je project concept zijn waar nodig tijdens het project aan te passen, mits aanpassingen kunnen worden onderbouwd.
+Aan het begin van dit blok werk je een projectbeschrijving uit. Punten die betrekking hebben op je project concept zijn waar nodig tijdens het project aan te passen, mits aanpassingen kunnen worden onderbouwd.
 
 Aan het einde lever je de volgende documentatie aan: 
 - Projectbeschrijving
