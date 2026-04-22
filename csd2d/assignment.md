@@ -7,6 +7,10 @@ Aan het einde lever je de volgende documentatie aan:
 - Proces documentatie
 - Reflectie documentatie
 
+
+_Zie verderop hieronder voor beschrijving per onderdeel_
+
+
 De uitkomst van je project presenteer je tijdens de laatste sessie. Dit eind artefact kan een werkende demo zijn, maar kan ook een onderzoeksresultaat zijn wanneer bijvoorbeeld het onderzoeken van een technologie centraal stond in je project. In dit laatste geval is je code base secundair, maar deze kan natuurlijk nog steeds in de vorm van een werkende demo gepresenteerd worden. Tijdens de eindpresentatie deel je naast je eind-artefact ook je proces en je reflectie en take-aways. 
 
 ### Projectbeschrijving
