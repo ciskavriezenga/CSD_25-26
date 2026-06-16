@@ -39,11 +39,10 @@ AudioPluginAudioProcessorEditor::~AudioPluginAudioProcessorEditor()
 void AudioPluginAudioProcessorEditor::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (juce::Colours::gainsboro);
 
-    g.setColour (juce::Colours::black);
-    g.setFont (15.0f);
-    g.drawFittedText ("Sliders" , getLocalBounds(), juce::Justification::bottomRight, 1);
+
+    g.drawImage (background, getLocalBounds().toFloat(), juce::RectanglePlacement::doNotResize, false);
+
 }
 
 void AudioPluginAudioProcessorEditor::resized()

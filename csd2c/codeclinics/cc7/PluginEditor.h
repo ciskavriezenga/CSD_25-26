@@ -2,7 +2,8 @@
 
 #include "PluginProcessor.h"
 #include "ParameterID.hpp"
-#include "svgslider.h" 
+#include "svgslider.h"
+#include "binarydata.h"
 //==============================================================================
 namespace plugin_focus {
 class AudioPluginAudioProcessorEditor final : public juce::AudioProcessorEditor
@@ -17,7 +18,7 @@ public:
 
 private:
     AudioPluginAudioProcessor& processorRef;
-    
+
     juce::Slider CutoffSlider {"Cutoff Slider"};
     juce::Slider ResonanceSlider {"Resonance Slider"};
     juce::Slider FilterTypeSlider {"FilterType Slider"};
@@ -25,6 +26,9 @@ private:
     juce::SliderParameterAttachment CutoffAttachment;
     juce::SliderParameterAttachment ResonanceAttachment;
     juce::SliderParameterAttachment FilterTypeAttachment;
+
+    juce::Image background {juce::ImageCache::getFromMemory(background::background_png, background::background_pngSize)};
+
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessorEditor)
 };

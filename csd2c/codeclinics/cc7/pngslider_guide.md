@@ -75,4 +75,4 @@ CutoffSlider.setLookAndFeel (nullptr);
 
 - The PNG should depict the knob at its **start** position. The LookAndFeel rotates it based on slider value.
 - Use a square image for best results. Images that aren't square will be stretched to fit the slider bounds.
-- If the image fails to load, `drawRotarySlider` will draw nothing. 
+- If the image fails to load, `drawRotarySlider` will draw nothing.
